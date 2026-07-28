@@ -1,0 +1,4053 @@
+[slice=row_p1 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p1_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004809, MAE: 0.054745, R²: 0.7161
+  测试集 - MSE: 0.015312, MAE: 0.096144, R²: 0.3600
+
+原始空间指标:
+  测试集 - MSE: 0.137805, MAE: 0.288433, R²: 0.3600
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7957
+  训练集 - Base Soft: 0.3978, Model Soft: 0.6001
+  训练集 - Base MAD : 0.7749, Model MAD : 0.9453
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6627
+  测试集 - Base Soft: 0.3908, Model Soft: 0.5488
+  测试集 - Base MAD : 0.7865, Model MAD : 0.9039
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_0.csv
+[slice=row_p1 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p1_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002862, MAE: 0.039397, R²: 0.8311
+  测试集 - MSE: 0.015729, MAE: 0.097465, R²: 0.3425
+
+原始空间指标:
+  测试集 - MSE: 0.141561, MAE: 0.292395, R²: 0.3425
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8445
+  训练集 - Base Soft: 0.3978, Model Soft: 0.6199
+  训练集 - Base MAD : 0.7749, Model MAD : 0.9606
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3908, Model Soft: 0.5675
+  测试集 - Base MAD : 0.7865, Model MAD : 0.9025
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_1.csv
+[slice=row_p1 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p1_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002076, MAE: 0.030673, R²: 0.8775
+  测试集 - MSE: 0.014712, MAE: 0.095922, R²: 0.3850
+
+原始空间指标:
+  测试集 - MSE: 0.132412, MAE: 0.287765, R²: 0.3850
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8689
+  训练集 - Base Soft: 0.3978, Model Soft: 0.6245
+  训练集 - Base MAD : 0.7749, Model MAD : 0.9693
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3908, Model Soft: 0.5642
+  测试集 - Base MAD : 0.7865, Model MAD : 0.9041
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_2.csv
+[slice=row_p1 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p1_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002679, MAE: 0.038749, R²: 0.8419
+  测试集 - MSE: 0.014155, MAE: 0.095316, R²: 0.4083
+
+原始空间指标:
+  测试集 - MSE: 0.127396, MAE: 0.285949, R²: 0.4083
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8384
+  训练集 - Base Soft: 0.3978, Model Soft: 0.6161
+  训练集 - Base MAD : 0.7749, Model MAD : 0.9613
+  测试集 - Base Hard: 0.3976, Model Hard: 0.8072
+  测试集 - Base Soft: 0.3908, Model Soft: 0.5687
+  测试集 - Base MAD : 0.7865, Model MAD : 0.9047
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_3.csv
+[slice=row_p1 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p1_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007243, MAE: 0.066961, R²: 0.5724
+  测试集 - MSE: 0.015734, MAE: 0.097417, R²: 0.3423
+
+原始空间指标:
+  测试集 - MSE: 0.141606, MAE: 0.292250, R²: 0.3423
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7591
+  训练集 - Base Soft: 0.3978, Model Soft: 0.5700
+  训练集 - Base MAD : 0.7749, Model MAD : 0.9330
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3908, Model Soft: 0.5478
+  测试集 - Base MAD : 0.7865, Model MAD : 0.9026
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p1_result_seed_4.csv
+[slice=row_p2 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p2_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004321, MAE: 0.050789, R²: 0.7449
+  测试集 - MSE: 0.015217, MAE: 0.095718, R²: 0.3639
+
+原始空间指标:
+  测试集 - MSE: 0.136954, MAE: 0.287153, R²: 0.3639
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.7988
+  训练集 - Base Soft: 0.3983, Model Soft: 0.6028
+  训练集 - Base MAD : 0.7757, Model MAD : 0.9492
+  测试集 - Base Hard: 0.4217, Model Hard: 0.6988
+  测试集 - Base Soft: 0.4010, Model Soft: 0.5496
+  测试集 - Base MAD : 0.7923, Model MAD : 0.9043
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_0.csv
+[slice=row_p2 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p2_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002991, MAE: 0.040817, R²: 0.8235
+  测试集 - MSE: 0.015418, MAE: 0.097795, R²: 0.3555
+
+原始空间指标:
+  测试集 - MSE: 0.138764, MAE: 0.293385, R²: 0.3555
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.8323
+  训练集 - Base Soft: 0.3983, Model Soft: 0.6196
+  训练集 - Base MAD : 0.7757, Model MAD : 0.9592
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7590
+  测试集 - Base Soft: 0.4010, Model Soft: 0.5717
+  测试集 - Base MAD : 0.7923, Model MAD : 0.9022
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_1.csv
+[slice=row_p2 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p2_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002843, MAE: 0.038753, R²: 0.8322
+  测试集 - MSE: 0.013906, MAE: 0.091615, R²: 0.4187
+
+原始空间指标:
+  测试集 - MSE: 0.125158, MAE: 0.274844, R²: 0.4187
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.8415
+  训练集 - Base Soft: 0.3983, Model Soft: 0.6175
+  训练集 - Base MAD : 0.7757, Model MAD : 0.9612
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7831
+  测试集 - Base Soft: 0.4010, Model Soft: 0.5703
+  测试集 - Base MAD : 0.7923, Model MAD : 0.9084
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_2.csv
+[slice=row_p2 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p2_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003120, MAE: 0.041592, R²: 0.8158
+  测试集 - MSE: 0.014285, MAE: 0.095114, R²: 0.4029
+
+原始空间指标:
+  测试集 - MSE: 0.128562, MAE: 0.285342, R²: 0.4029
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.8171
+  训练集 - Base Soft: 0.3983, Model Soft: 0.6125
+  训练集 - Base MAD : 0.7757, Model MAD : 0.9584
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7831
+  测试集 - Base Soft: 0.4010, Model Soft: 0.5711
+  测试集 - Base MAD : 0.7923, Model MAD : 0.9049
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_3.csv
+[slice=row_p2 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p2_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007201, MAE: 0.065410, R²: 0.5749
+  测试集 - MSE: 0.015832, MAE: 0.100364, R²: 0.3382
+
+原始空间指标:
+  测试集 - MSE: 0.142485, MAE: 0.301091, R²: 0.3382
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.7591
+  训练集 - Base Soft: 0.3983, Model Soft: 0.5709
+  训练集 - Base MAD : 0.7757, Model MAD : 0.9346
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7229
+  测试集 - Base Soft: 0.4010, Model Soft: 0.5466
+  测试集 - Base MAD : 0.7923, Model MAD : 0.8996
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p2_result_seed_4.csv
+[slice=row_p3 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p3_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005536, MAE: 0.056813, R²: 0.6732
+  测试集 - MSE: 0.016023, MAE: 0.096605, R²: 0.3302
+
+原始空间指标:
+  测试集 - MSE: 0.144210, MAE: 0.289814, R²: 0.3302
+
+准确率指标:
+  训练集 - Base Hard: 0.4421, Model Hard: 0.7652
+  训练集 - Base Soft: 0.3955, Model Soft: 0.5908
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9432
+  测试集 - Base Hard: 0.4217, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3788, Model Soft: 0.5474
+  测试集 - Base MAD : 0.7732, Model MAD : 0.9034
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_0.csv
+[slice=row_p3 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p3_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003159, MAE: 0.042002, R²: 0.8135
+  测试集 - MSE: 0.016371, MAE: 0.099746, R²: 0.3157
+
+原始空间指标:
+  测试集 - MSE: 0.147336, MAE: 0.299238, R²: 0.3157
+
+准确率指标:
+  训练集 - Base Hard: 0.4421, Model Hard: 0.8323
+  训练集 - Base Soft: 0.3955, Model Soft: 0.6184
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9580
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3788, Model Soft: 0.5704
+  测试集 - Base MAD : 0.7732, Model MAD : 0.9003
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_1.csv
+[slice=row_p3 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p3_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002347, MAE: 0.031978, R²: 0.8615
+  测试集 - MSE: 0.015050, MAE: 0.094834, R²: 0.3709
+
+原始空间指标:
+  测试集 - MSE: 0.135450, MAE: 0.284501, R²: 0.3709
+
+准确率指标:
+  训练集 - Base Hard: 0.4421, Model Hard: 0.8720
+  训练集 - Base Soft: 0.3955, Model Soft: 0.6213
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9680
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3788, Model Soft: 0.5625
+  测试集 - Base MAD : 0.7732, Model MAD : 0.9052
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_2.csv
+[slice=row_p3 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p3_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004484, MAE: 0.051879, R²: 0.7353
+  测试集 - MSE: 0.013778, MAE: 0.092177, R²: 0.4241
+
+原始空间指标:
+  测试集 - MSE: 0.124005, MAE: 0.276532, R²: 0.4241
+
+准确率指标:
+  训练集 - Base Hard: 0.4421, Model Hard: 0.7896
+  训练集 - Base Soft: 0.3955, Model Soft: 0.6035
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9481
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7952
+  测试集 - Base Soft: 0.3788, Model Soft: 0.5763
+  测试集 - Base MAD : 0.7732, Model MAD : 0.9078
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_3.csv
+[slice=row_p3 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p3_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007401, MAE: 0.068190, R²: 0.5631
+  测试集 - MSE: 0.015817, MAE: 0.096930, R²: 0.3389
+
+原始空间指标:
+  测试集 - MSE: 0.142350, MAE: 0.290791, R²: 0.3389
+
+准确率指标:
+  训练集 - Base Hard: 0.4421, Model Hard: 0.7317
+  训练集 - Base Soft: 0.3955, Model Soft: 0.5719
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9318
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3788, Model Soft: 0.5566
+  测试集 - Base MAD : 0.7732, Model MAD : 0.9031
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p3_result_seed_4.csv
+[slice=row_p4 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p4_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004682, MAE: 0.053469, R²: 0.7236
+  测试集 - MSE: 0.016578, MAE: 0.100038, R²: 0.3071
+
+原始空间指标:
+  测试集 - MSE: 0.149199, MAE: 0.300113, R²: 0.3071
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.7866
+  训练集 - Base Soft: 0.3935, Model Soft: 0.6000
+  训练集 - Base MAD : 0.7725, Model MAD : 0.9465
+  测试集 - Base Hard: 0.4096, Model Hard: 0.6627
+  测试集 - Base Soft: 0.3752, Model Soft: 0.5426
+  测试集 - Base MAD : 0.7734, Model MAD : 0.9000
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_0.csv
+[slice=row_p4 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p4_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002934, MAE: 0.039827, R²: 0.8268
+  测试集 - MSE: 0.016185, MAE: 0.099811, R²: 0.3235
+
+原始空间指标:
+  测试集 - MSE: 0.145668, MAE: 0.299433, R²: 0.3235
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.8476
+  训练集 - Base Soft: 0.3935, Model Soft: 0.6196
+  训练集 - Base MAD : 0.7725, Model MAD : 0.9602
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3752, Model Soft: 0.5686
+  测试集 - Base MAD : 0.7734, Model MAD : 0.9002
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_1.csv
+[slice=row_p4 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p4_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004422, MAE: 0.051680, R²: 0.7390
+  测试集 - MSE: 0.015560, MAE: 0.094613, R²: 0.3496
+
+原始空间指标:
+  测试集 - MSE: 0.140043, MAE: 0.283839, R²: 0.3496
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.7896
+  训练集 - Base Soft: 0.3935, Model Soft: 0.6081
+  训练集 - Base MAD : 0.7725, Model MAD : 0.9483
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7952
+  测试集 - Base Soft: 0.3752, Model Soft: 0.5689
+  测试集 - Base MAD : 0.7734, Model MAD : 0.9054
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_2.csv
+[slice=row_p4 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p4_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003918, MAE: 0.048374, R²: 0.7687
+  测试集 - MSE: 0.014402, MAE: 0.095490, R²: 0.3980
+
+原始空间指标:
+  测试集 - MSE: 0.129618, MAE: 0.286470, R²: 0.3980
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.8140
+  训练集 - Base Soft: 0.3935, Model Soft: 0.6046
+  训练集 - Base MAD : 0.7725, Model MAD : 0.9516
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3752, Model Soft: 0.5674
+  测试集 - Base MAD : 0.7734, Model MAD : 0.9045
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_3.csv
+[slice=row_p4 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p4_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007421, MAE: 0.066382, R²: 0.5619
+  测试集 - MSE: 0.016068, MAE: 0.101694, R²: 0.3284
+
+原始空间指标:
+  测试集 - MSE: 0.144614, MAE: 0.305081, R²: 0.3284
+
+准确率指标:
+  训练集 - Base Hard: 0.4329, Model Hard: 0.7256
+  训练集 - Base Soft: 0.3935, Model Soft: 0.5643
+  训练集 - Base MAD : 0.7725, Model MAD : 0.9336
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3752, Model Soft: 0.5384
+  测试集 - Base MAD : 0.7734, Model MAD : 0.8983
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p4_result_seed_4.csv
+[slice=row_p5 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p5_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005013, MAE: 0.053949, R²: 0.7041
+  测试集 - MSE: 0.016420, MAE: 0.095921, R²: 0.3137
+
+原始空间指标:
+  测试集 - MSE: 0.147781, MAE: 0.287764, R²: 0.3137
+
+准确率指标:
+  训练集 - Base Hard: 0.4055, Model Hard: 0.7805
+  训练集 - Base Soft: 0.3917, Model Soft: 0.5949
+  训练集 - Base MAD : 0.7700, Model MAD : 0.9461
+  测试集 - Base Hard: 0.3735, Model Hard: 0.6747
+  测试集 - Base Soft: 0.3710, Model Soft: 0.5479
+  测试集 - Base MAD : 0.7738, Model MAD : 0.9041
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_0.csv
+[slice=row_p5 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p5_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002426, MAE: 0.034238, R²: 0.8568
+  测试集 - MSE: 0.016154, MAE: 0.097834, R²: 0.3248
+
+原始空间指标:
+  测试集 - MSE: 0.145383, MAE: 0.293501, R²: 0.3248
+
+准确率指标:
+  训练集 - Base Hard: 0.4055, Model Hard: 0.8659
+  训练集 - Base Soft: 0.3917, Model Soft: 0.6227
+  训练集 - Base MAD : 0.7700, Model MAD : 0.9658
+  测试集 - Base Hard: 0.3735, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3710, Model Soft: 0.5619
+  测试集 - Base MAD : 0.7738, Model MAD : 0.9022
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_1.csv
+[slice=row_p5 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p5_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.001935, MAE: 0.030127, R²: 0.8858
+  测试集 - MSE: 0.015295, MAE: 0.094617, R²: 0.3607
+
+原始空间指标:
+  测试集 - MSE: 0.137653, MAE: 0.283852, R²: 0.3607
+
+准确率指标:
+  训练集 - Base Hard: 0.4055, Model Hard: 0.8628
+  训练集 - Base Soft: 0.3917, Model Soft: 0.6261
+  训练集 - Base MAD : 0.7700, Model MAD : 0.9699
+  测试集 - Base Hard: 0.3735, Model Hard: 0.7590
+  测试集 - Base Soft: 0.3710, Model Soft: 0.5638
+  测试集 - Base MAD : 0.7738, Model MAD : 0.9054
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_2.csv
+[slice=row_p5 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p5_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002615, MAE: 0.037788, R²: 0.8457
+  测试集 - MSE: 0.015317, MAE: 0.097050, R²: 0.3598
+
+原始空间指标:
+  测试集 - MSE: 0.137851, MAE: 0.291151, R²: 0.3598
+
+准确率指标:
+  训练集 - Base Hard: 0.4055, Model Hard: 0.8567
+  训练集 - Base Soft: 0.3917, Model Soft: 0.6167
+  训练集 - Base MAD : 0.7700, Model MAD : 0.9622
+  测试集 - Base Hard: 0.3735, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3710, Model Soft: 0.5628
+  测试集 - Base MAD : 0.7738, Model MAD : 0.9029
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_3.csv
+[slice=row_p5 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p5_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007460, MAE: 0.068646, R²: 0.5596
+  测试集 - MSE: 0.016391, MAE: 0.097331, R²: 0.3149
+
+原始空间指标:
+  测试集 - MSE: 0.147519, MAE: 0.291992, R²: 0.3149
+
+准确率指标:
+  训练集 - Base Hard: 0.4055, Model Hard: 0.7226
+  训练集 - Base Soft: 0.3917, Model Soft: 0.5746
+  训练集 - Base MAD : 0.7700, Model MAD : 0.9314
+  测试集 - Base Hard: 0.3735, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3710, Model Soft: 0.5568
+  测试集 - Base MAD : 0.7738, Model MAD : 0.9027
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p5_result_seed_4.csv
+[slice=row_p6 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p6_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004478, MAE: 0.051408, R²: 0.7357
+  测试集 - MSE: 0.016122, MAE: 0.100999, R²: 0.3261
+
+原始空间指标:
+  测试集 - MSE: 0.145094, MAE: 0.302998, R²: 0.3261
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7927
+  训练集 - Base Soft: 0.3979, Model Soft: 0.6011
+  训练集 - Base MAD : 0.7752, Model MAD : 0.9486
+  测试集 - Base Hard: 0.4096, Model Hard: 0.6627
+  测试集 - Base Soft: 0.3867, Model Soft: 0.5474
+  测试集 - Base MAD : 0.7810, Model MAD : 0.8990
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_0.csv
+[slice=row_p6 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p6_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002942, MAE: 0.039570, R²: 0.8264
+  测试集 - MSE: 0.015618, MAE: 0.095761, R²: 0.3472
+
+原始空间指标:
+  测试集 - MSE: 0.140563, MAE: 0.287282, R²: 0.3472
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8354
+  训练集 - Base Soft: 0.3979, Model Soft: 0.6202
+  训练集 - Base MAD : 0.7752, Model MAD : 0.9604
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3867, Model Soft: 0.5707
+  测试集 - Base MAD : 0.7810, Model MAD : 0.9042
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_1.csv
+[slice=row_p6 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p6_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005951, MAE: 0.060147, R²: 0.6487
+  测试集 - MSE: 0.015713, MAE: 0.092853, R²: 0.3432
+
+原始空间指标:
+  测试集 - MSE: 0.141416, MAE: 0.278560, R²: 0.3432
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7805
+  训练集 - Base Soft: 0.3979, Model Soft: 0.5978
+  训练集 - Base MAD : 0.7752, Model MAD : 0.9399
+  测试集 - Base Hard: 0.4096, Model Hard: 0.8072
+  测试集 - Base Soft: 0.3867, Model Soft: 0.5700
+  测试集 - Base MAD : 0.7810, Model MAD : 0.9071
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_2.csv
+[slice=row_p6 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p6_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.001185, MAE: 0.016664, R²: 0.9301
+  测试集 - MSE: 0.015208, MAE: 0.097126, R²: 0.3643
+
+原始空间指标:
+  测试集 - MSE: 0.136870, MAE: 0.291378, R²: 0.3643
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.9451
+  训练集 - Base Soft: 0.3979, Model Soft: 0.6279
+  训练集 - Base MAD : 0.7752, Model MAD : 0.9833
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3867, Model Soft: 0.5617
+  测试集 - Base MAD : 0.7810, Model MAD : 0.9029
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_3.csv
+[slice=row_p6 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p6_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007046, MAE: 0.067174, R²: 0.5840
+  测试集 - MSE: 0.014517, MAE: 0.091966, R²: 0.3932
+
+原始空间指标:
+  测试集 - MSE: 0.130653, MAE: 0.275899, R²: 0.3932
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7317
+  训练集 - Base Soft: 0.3979, Model Soft: 0.5744
+  训练集 - Base MAD : 0.7752, Model MAD : 0.9328
+  测试集 - Base Hard: 0.4096, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3867, Model Soft: 0.5619
+  测试集 - Base MAD : 0.7810, Model MAD : 0.9080
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p6_result_seed_4.csv
+[slice=row_p7 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p7_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003969, MAE: 0.048548, R²: 0.7657
+  测试集 - MSE: 0.015303, MAE: 0.094980, R²: 0.3604
+
+原始空间指标:
+  测试集 - MSE: 0.137724, MAE: 0.284940, R²: 0.3604
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8049
+  训练集 - Base Soft: 0.4012, Model Soft: 0.6064
+  训练集 - Base MAD : 0.7751, Model MAD : 0.9515
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3814, Model Soft: 0.5516
+  测试集 - Base MAD : 0.7808, Model MAD : 0.9050
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_0.csv
+[slice=row_p7 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p7_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002829, MAE: 0.038910, R²: 0.8330
+  测试集 - MSE: 0.015599, MAE: 0.096426, R²: 0.3480
+
+原始空间指标:
+  测试集 - MSE: 0.140390, MAE: 0.289277, R²: 0.3480
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8476
+  训练集 - Base Soft: 0.4012, Model Soft: 0.6208
+  训练集 - Base MAD : 0.7751, Model MAD : 0.9611
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3814, Model Soft: 0.5674
+  测试集 - Base MAD : 0.7808, Model MAD : 0.9036
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_1.csv
+[slice=row_p7 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p7_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002908, MAE: 0.039477, R²: 0.8283
+  测试集 - MSE: 0.015218, MAE: 0.094540, R²: 0.3639
+
+原始空间指标:
+  测试集 - MSE: 0.136966, MAE: 0.283619, R²: 0.3639
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.8323
+  训练集 - Base Soft: 0.4012, Model Soft: 0.6185
+  训练集 - Base MAD : 0.7751, Model MAD : 0.9605
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3814, Model Soft: 0.5666
+  测试集 - Base MAD : 0.7808, Model MAD : 0.9055
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_2.csv
+[slice=row_p7 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p7_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005150, MAE: 0.055702, R²: 0.6960
+  测试集 - MSE: 0.014629, MAE: 0.095497, R²: 0.3885
+
+原始空间指标:
+  测试集 - MSE: 0.131658, MAE: 0.286490, R²: 0.3885
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7896
+  训练集 - Base Soft: 0.4012, Model Soft: 0.5914
+  训练集 - Base MAD : 0.7751, Model MAD : 0.9443
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3814, Model Soft: 0.5578
+  测试集 - Base MAD : 0.7808, Model MAD : 0.9045
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_3.csv
+[slice=row_p7 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p7_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007307, MAE: 0.067612, R²: 0.5687
+  测试集 - MSE: 0.016237, MAE: 0.100281, R²: 0.3213
+
+原始空间指标:
+  测试集 - MSE: 0.146132, MAE: 0.300843, R²: 0.3213
+
+准确率指标:
+  训练集 - Base Hard: 0.4390, Model Hard: 0.7195
+  训练集 - Base Soft: 0.4012, Model Soft: 0.5678
+  训练集 - Base MAD : 0.7751, Model MAD : 0.9324
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3814, Model Soft: 0.5415
+  测试集 - Base MAD : 0.7808, Model MAD : 0.8997
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p7_result_seed_4.csv
+[slice=row_p8 seed=0 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p8_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.001521, MAE: 0.021274, R²: 0.9102
+  测试集 - MSE: 0.014025, MAE: 0.091595, R²: 0.4138
+
+原始空间指标:
+  测试集 - MSE: 0.126226, MAE: 0.274784, R²: 0.4138
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.9207
+  训练集 - Base Soft: 0.3903, Model Soft: 0.6272
+  训练集 - Base MAD : 0.7694, Model MAD : 0.9787
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7952
+  测试集 - Base Soft: 0.3765, Model Soft: 0.5644
+  测试集 - Base MAD : 0.7835, Model MAD : 0.9084
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_0.csv
+[slice=row_p8 seed=1 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p8_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003058, MAE: 0.041312, R²: 0.8195
+  测试集 - MSE: 0.015269, MAE: 0.095600, R²: 0.3618
+
+原始空间指标:
+  测试集 - MSE: 0.137418, MAE: 0.286799, R²: 0.3618
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.8140
+  训练集 - Base Soft: 0.3903, Model Soft: 0.6179
+  训练集 - Base MAD : 0.7694, Model MAD : 0.9587
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3765, Model Soft: 0.5719
+  测试集 - Base MAD : 0.7835, Model MAD : 0.9044
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_1.csv
+[slice=row_p8 seed=2 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p8_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003033, MAE: 0.040179, R²: 0.8210
+  测试集 - MSE: 0.014646, MAE: 0.094258, R²: 0.3878
+
+原始空间指标:
+  测试集 - MSE: 0.131811, MAE: 0.282775, R²: 0.3878
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.8262
+  训练集 - Base Soft: 0.3903, Model Soft: 0.6168
+  训练集 - Base MAD : 0.7694, Model MAD : 0.9598
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3765, Model Soft: 0.5677
+  测试集 - Base MAD : 0.7835, Model MAD : 0.9057
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_2.csv
+[slice=row_p8 seed=3 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p8_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003259, MAE: 0.042781, R²: 0.8076
+  测试集 - MSE: 0.014019, MAE: 0.091904, R²: 0.4140
+
+原始空间指标:
+  测试集 - MSE: 0.126172, MAE: 0.275711, R²: 0.4140
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.8293
+  训练集 - Base Soft: 0.3903, Model Soft: 0.6099
+  训练集 - Base MAD : 0.7694, Model MAD : 0.9572
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3765, Model Soft: 0.5713
+  测试集 - Base MAD : 0.7835, Model MAD : 0.9081
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_3.csv
+[slice=row_p8 seed=4 dim=10] -> group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_row_p8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_row_p8_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 10 (max available: 10)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 266), Test: (83, 266)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007522, MAE: 0.070309, R²: 0.5560
+  测试集 - MSE: 0.015352, MAE: 0.092588, R²: 0.3583
+
+原始空间指标:
+  测试集 - MSE: 0.138165, MAE: 0.277764, R²: 0.3583
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.7165
+  训练集 - Base Soft: 0.3903, Model Soft: 0.5719
+  训练集 - Base MAD : 0.7694, Model MAD : 0.9297
+  测试集 - Base Hard: 0.4217, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3765, Model Soft: 0.5565
+  测试集 - Base MAD : 0.7835, Model MAD : 0.9074
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_row_p8_result_seed_4.csv
+[slice=col_d0 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d0_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d0_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002880, MAE: 0.037524, R²: 0.8300
+  测试集 - MSE: 0.017063, MAE: 0.102505, R²: 0.2868
+
+原始空间指标:
+  测试集 - MSE: 0.153567, MAE: 0.307515, R²: 0.2868
+
+准确率指标:
+  训练集 - Base Hard: 0.4146, Model Hard: 0.8537
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6170
+  训练集 - Base MAD : 0.7684, Model MAD : 0.9625
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6867
+  测试集 - Base Soft: 0.3787, Model Soft: 0.5383
+  测试集 - Base MAD : 0.7783, Model MAD : 0.8975
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_0.csv
+[slice=col_d0 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d0_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d0_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.008134, MAE: 0.070635, R²: 0.5199
+  测试集 - MSE: 0.020514, MAE: 0.118202, R²: 0.1425
+
+原始空间指标:
+  测试集 - MSE: 0.184625, MAE: 0.354606, R²: 0.1425
+
+准确率指标:
+  训练集 - Base Hard: 0.4146, Model Hard: 0.7012
+  训练集 - Base Soft: 0.3914, Model Soft: 0.5673
+  训练集 - Base MAD : 0.7684, Model MAD : 0.9294
+  测试集 - Base Hard: 0.3976, Model Hard: 0.5542
+  测试集 - Base Soft: 0.3787, Model Soft: 0.5156
+  测试集 - Base MAD : 0.7783, Model MAD : 0.8818
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_1.csv
+[slice=col_d0 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d0_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d0_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005211, MAE: 0.056550, R²: 0.6924
+  测试集 - MSE: 0.017637, MAE: 0.102143, R²: 0.2628
+
+原始空间指标:
+  测试集 - MSE: 0.158730, MAE: 0.306430, R²: 0.2628
+
+准确率指标:
+  训练集 - Base Hard: 0.4146, Model Hard: 0.7530
+  训练集 - Base Soft: 0.3914, Model Soft: 0.5911
+  训练集 - Base MAD : 0.7684, Model MAD : 0.9435
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6867
+  测试集 - Base Soft: 0.3787, Model Soft: 0.5388
+  测试集 - Base MAD : 0.7783, Model MAD : 0.8979
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_2.csv
+[slice=col_d0 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d0_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d0_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003652, MAE: 0.045700, R²: 0.7844
+  测试集 - MSE: 0.016626, MAE: 0.102653, R²: 0.3050
+
+原始空间指标:
+  测试集 - MSE: 0.149634, MAE: 0.307958, R²: 0.3050
+
+准确率指标:
+  训练集 - Base Hard: 0.4146, Model Hard: 0.8354
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6076
+  训练集 - Base MAD : 0.7684, Model MAD : 0.9543
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3787, Model Soft: 0.5538
+  测试集 - Base MAD : 0.7783, Model MAD : 0.8973
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_3.csv
+[slice=col_d0 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d0_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d0_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002250, MAE: 0.027598, R²: 0.8672
+  测试集 - MSE: 0.016288, MAE: 0.098652, R²: 0.3192
+
+原始空间指标:
+  测试集 - MSE: 0.146590, MAE: 0.295957, R²: 0.3192
+
+准确率指标:
+  训练集 - Base Hard: 0.4146, Model Hard: 0.9024
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6222
+  训练集 - Base MAD : 0.7684, Model MAD : 0.9724
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7108
+  测试集 - Base Soft: 0.3787, Model Soft: 0.5514
+  测试集 - Base MAD : 0.7783, Model MAD : 0.9013
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d0_result_seed_4.csv
+[slice=col_d1 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d1_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003194, MAE: 0.040541, R²: 0.8115
+  测试集 - MSE: 0.016419, MAE: 0.101171, R²: 0.3137
+
+原始空间指标:
+  测试集 - MSE: 0.147773, MAE: 0.303512, R²: 0.3137
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8445
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6128
+  训练集 - Base MAD : 0.7709, Model MAD : 0.9595
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6747
+  测试集 - Base Soft: 0.3767, Model Soft: 0.5416
+  测试集 - Base MAD : 0.7794, Model MAD : 0.8988
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_0.csv
+[slice=col_d1 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d1_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006208, MAE: 0.061527, R²: 0.6336
+  测试集 - MSE: 0.016777, MAE: 0.103570, R²: 0.2987
+
+原始空间指标:
+  测试集 - MSE: 0.150997, MAE: 0.310710, R²: 0.2987
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.7530
+  训练集 - Base Soft: 0.3914, Model Soft: 0.5791
+  训练集 - Base MAD : 0.7709, Model MAD : 0.9385
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6265
+  测试集 - Base Soft: 0.3767, Model Soft: 0.5422
+  测试集 - Base MAD : 0.7794, Model MAD : 0.8964
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_1.csv
+[slice=col_d1 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d1_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006599, MAE: 0.064024, R²: 0.6105
+  测试集 - MSE: 0.016958, MAE: 0.100946, R²: 0.2912
+
+原始空间指标:
+  测试集 - MSE: 0.152621, MAE: 0.302837, R²: 0.2912
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.7561
+  训练集 - Base Soft: 0.3914, Model Soft: 0.5748
+  训练集 - Base MAD : 0.7709, Model MAD : 0.9360
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6867
+  测试集 - Base Soft: 0.3767, Model Soft: 0.5396
+  测试集 - Base MAD : 0.7794, Model MAD : 0.8991
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_2.csv
+[slice=col_d1 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d1_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003456, MAE: 0.045450, R²: 0.7960
+  测试集 - MSE: 0.015834, MAE: 0.098235, R²: 0.3382
+
+原始空间指标:
+  测试集 - MSE: 0.142505, MAE: 0.294705, R²: 0.3382
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8079
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6102
+  训练集 - Base MAD : 0.7709, Model MAD : 0.9546
+  测试集 - Base Hard: 0.4458, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3767, Model Soft: 0.5632
+  测试集 - Base MAD : 0.7794, Model MAD : 0.9018
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_3.csv
+[slice=col_d1 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d1_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d1_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003639, MAE: 0.043149, R²: 0.7852
+  测试集 - MSE: 0.017488, MAE: 0.106368, R²: 0.2690
+
+原始空间指标:
+  测试集 - MSE: 0.157392, MAE: 0.319103, R²: 0.2690
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8476
+  训练集 - Base Soft: 0.3914, Model Soft: 0.6091
+  训练集 - Base MAD : 0.7709, Model MAD : 0.9569
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6627
+  测试集 - Base Soft: 0.3767, Model Soft: 0.5355
+  测试集 - Base MAD : 0.7794, Model MAD : 0.8936
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d1_result_seed_4.csv
+[slice=col_d2 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d2_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.001877, MAE: 0.025366, R²: 0.8892
+  测试集 - MSE: 0.016739, MAE: 0.101069, R²: 0.3003
+
+原始空间指标:
+  测试集 - MSE: 0.150651, MAE: 0.303206, R²: 0.3003
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8872
+  训练集 - Base Soft: 0.3959, Model Soft: 0.6255
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9746
+  测试集 - Base Hard: 0.3735, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3685, Model Soft: 0.5424
+  测试集 - Base MAD : 0.7765, Model MAD : 0.8989
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_0.csv
+[slice=col_d2 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d2_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007927, MAE: 0.068817, R²: 0.5321
+  测试集 - MSE: 0.019280, MAE: 0.113638, R²: 0.1941
+
+原始空间指标:
+  测试集 - MSE: 0.173520, MAE: 0.340915, R²: 0.1941
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.7104
+  训练集 - Base Soft: 0.3959, Model Soft: 0.5678
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9312
+  测试集 - Base Hard: 0.3735, Model Hard: 0.6024
+  测试集 - Base Soft: 0.3685, Model Soft: 0.5226
+  测试集 - Base MAD : 0.7765, Model MAD : 0.8864
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_1.csv
+[slice=col_d2 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d2_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.017286, MAE: 0.104661, R²: -0.0204
+  测试集 - MSE: 0.025846, MAE: 0.131814, R²: -0.0803
+
+原始空间指标:
+  测试集 - MSE: 0.232610, MAE: 0.395442, R²: -0.0803
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.5671
+  训练集 - Base Soft: 0.3959, Model Soft: 0.4987
+  训练集 - Base MAD : 0.7724, Model MAD : 0.8953
+  测试集 - Base Hard: 0.3735, Model Hard: 0.4819
+  测试集 - Base Soft: 0.3685, Model Soft: 0.4904
+  测试集 - Base MAD : 0.7765, Model MAD : 0.8682
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_2.csv
+[slice=col_d2 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d2_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002266, MAE: 0.032656, R²: 0.8662
+  测试集 - MSE: 0.015420, MAE: 0.095301, R²: 0.3555
+
+原始空间指标:
+  测试集 - MSE: 0.138779, MAE: 0.285903, R²: 0.3555
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8750
+  训练集 - Base Soft: 0.3959, Model Soft: 0.6237
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9673
+  测试集 - Base Hard: 0.3735, Model Hard: 0.7711
+  测试集 - Base Soft: 0.3685, Model Soft: 0.5730
+  测试集 - Base MAD : 0.7765, Model MAD : 0.9047
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_3.csv
+[slice=col_d2 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d2_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d2_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004010, MAE: 0.047284, R²: 0.7633
+  测试集 - MSE: 0.016980, MAE: 0.103288, R²: 0.2902
+
+原始空间指标:
+  测试集 - MSE: 0.152821, MAE: 0.309864, R²: 0.2902
+
+准确率指标:
+  训练集 - Base Hard: 0.4299, Model Hard: 0.8293
+  训练集 - Base Soft: 0.3959, Model Soft: 0.6050
+  训练集 - Base MAD : 0.7724, Model MAD : 0.9527
+  测试集 - Base Hard: 0.3735, Model Hard: 0.6867
+  测试集 - Base Soft: 0.3685, Model Soft: 0.5323
+  测试集 - Base MAD : 0.7765, Model MAD : 0.8967
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d2_result_seed_4.csv
+[slice=col_d3 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d3_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003036, MAE: 0.039468, R²: 0.8208
+  测试集 - MSE: 0.017214, MAE: 0.102397, R²: 0.2805
+
+原始空间指标:
+  测试集 - MSE: 0.154926, MAE: 0.307190, R²: 0.2805
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8293
+  训练集 - Base Soft: 0.3996, Model Soft: 0.6157
+  训练集 - Base MAD : 0.7772, Model MAD : 0.9605
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6867
+  测试集 - Base Soft: 0.3819, Model Soft: 0.5377
+  测试集 - Base MAD : 0.7775, Model MAD : 0.8976
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_0.csv
+[slice=col_d3 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d3_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006030, MAE: 0.060864, R²: 0.6441
+  测试集 - MSE: 0.018043, MAE: 0.110155, R²: 0.2458
+
+原始空间指标:
+  测试集 - MSE: 0.162384, MAE: 0.330464, R²: 0.2458
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7530
+  训练集 - Base Soft: 0.3996, Model Soft: 0.5801
+  训练集 - Base MAD : 0.7772, Model MAD : 0.9391
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6627
+  测试集 - Base Soft: 0.3819, Model Soft: 0.5298
+  测试集 - Base MAD : 0.7775, Model MAD : 0.8898
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_1.csv
+[slice=col_d3 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d3_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006876, MAE: 0.064692, R²: 0.5941
+  测试集 - MSE: 0.019301, MAE: 0.108949, R²: 0.1932
+
+原始空间指标:
+  测试集 - MSE: 0.173707, MAE: 0.326848, R²: 0.1932
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7439
+  训练集 - Base Soft: 0.3996, Model Soft: 0.5742
+  训练集 - Base MAD : 0.7772, Model MAD : 0.9353
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6024
+  测试集 - Base Soft: 0.3819, Model Soft: 0.5277
+  测试集 - Base MAD : 0.7775, Model MAD : 0.8911
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_2.csv
+[slice=col_d3 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d3_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004473, MAE: 0.052581, R²: 0.7360
+  测试集 - MSE: 0.016301, MAE: 0.098523, R²: 0.3186
+
+原始空间指标:
+  测试集 - MSE: 0.146710, MAE: 0.295568, R²: 0.3186
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7805
+  训练集 - Base Soft: 0.3996, Model Soft: 0.6100
+  训练集 - Base MAD : 0.7772, Model MAD : 0.9474
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3819, Model Soft: 0.5671
+  测试集 - Base MAD : 0.7775, Model MAD : 0.9015
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_3.csv
+[slice=col_d3 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d3_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d3_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002701, MAE: 0.035450, R²: 0.8406
+  测试集 - MSE: 0.016879, MAE: 0.103847, R²: 0.2945
+
+原始空间指标:
+  测试集 - MSE: 0.151914, MAE: 0.311541, R²: 0.2945
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8567
+  训练集 - Base Soft: 0.3996, Model Soft: 0.6160
+  训练集 - Base MAD : 0.7772, Model MAD : 0.9645
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7108
+  测试集 - Base Soft: 0.3819, Model Soft: 0.5413
+  测试集 - Base MAD : 0.7775, Model MAD : 0.8962
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d3_result_seed_4.csv
+[slice=col_d4 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d4_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003083, MAE: 0.039571, R²: 0.8180
+  测试集 - MSE: 0.016698, MAE: 0.100968, R²: 0.3020
+
+原始空间指标:
+  测试集 - MSE: 0.150280, MAE: 0.302903, R²: 0.3020
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8201
+  训练集 - Base Soft: 0.3927, Model Soft: 0.6163
+  训练集 - Base MAD : 0.7728, Model MAD : 0.9604
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3723, Model Soft: 0.5442
+  测试集 - Base MAD : 0.7756, Model MAD : 0.8990
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_0.csv
+[slice=col_d4 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d4_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006205, MAE: 0.062088, R²: 0.6337
+  测试集 - MSE: 0.019255, MAE: 0.115948, R²: 0.1952
+
+原始空间指标:
+  测试集 - MSE: 0.173295, MAE: 0.347843, R²: 0.1952
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7378
+  训练集 - Base Soft: 0.3927, Model Soft: 0.5850
+  训练集 - Base MAD : 0.7728, Model MAD : 0.9379
+  测试集 - Base Hard: 0.3855, Model Hard: 0.5904
+  测试集 - Base Soft: 0.3723, Model Soft: 0.5240
+  测试集 - Base MAD : 0.7756, Model MAD : 0.8841
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_1.csv
+[slice=col_d4 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d4_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003080, MAE: 0.041509, R²: 0.8182
+  测试集 - MSE: 0.016280, MAE: 0.101673, R²: 0.3195
+
+原始空间指标:
+  测试集 - MSE: 0.146516, MAE: 0.305020, R²: 0.3195
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8171
+  训练集 - Base Soft: 0.3927, Model Soft: 0.6122
+  训练集 - Base MAD : 0.7728, Model MAD : 0.9585
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3723, Model Soft: 0.5490
+  测试集 - Base MAD : 0.7756, Model MAD : 0.8983
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_2.csv
+[slice=col_d4 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d4_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002997, MAE: 0.038950, R²: 0.8231
+  测试集 - MSE: 0.016053, MAE: 0.097849, R²: 0.3290
+
+原始空间指标:
+  测试集 - MSE: 0.144481, MAE: 0.293546, R²: 0.3290
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8323
+  训练集 - Base Soft: 0.3927, Model Soft: 0.6186
+  训练集 - Base MAD : 0.7728, Model MAD : 0.9611
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7831
+  测试集 - Base Soft: 0.3723, Model Soft: 0.5651
+  测试集 - Base MAD : 0.7756, Model MAD : 0.9022
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_3.csv
+[slice=col_d4 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d4_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d4_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003950, MAE: 0.047279, R²: 0.7668
+  测试集 - MSE: 0.019053, MAE: 0.111769, R²: 0.2036
+
+原始空间指标:
+  测试集 - MSE: 0.171477, MAE: 0.335306, R²: 0.2036
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8018
+  训练集 - Base Soft: 0.3927, Model Soft: 0.6061
+  训练集 - Base MAD : 0.7728, Model MAD : 0.9527
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6024
+  测试集 - Base Soft: 0.3723, Model Soft: 0.5245
+  测试集 - Base MAD : 0.7756, Model MAD : 0.8882
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d4_result_seed_4.csv
+[slice=col_d5 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d5_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003129, MAE: 0.040241, R²: 0.8153
+  测试集 - MSE: 0.016050, MAE: 0.097345, R²: 0.3291
+
+原始空间指标:
+  测试集 - MSE: 0.144450, MAE: 0.292036, R²: 0.3291
+
+准确率指标:
+  训练集 - Base Hard: 0.4116, Model Hard: 0.8262
+  训练集 - Base Soft: 0.3911, Model Soft: 0.6176
+  训练集 - Base MAD : 0.7716, Model MAD : 0.9598
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3850, Model Soft: 0.5430
+  测试集 - Base MAD : 0.7822, Model MAD : 0.9027
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_0.csv
+[slice=col_d5 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d5_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007528, MAE: 0.067346, R²: 0.5556
+  测试集 - MSE: 0.019539, MAE: 0.114148, R²: 0.1833
+
+原始空间指标:
+  测试集 - MSE: 0.175852, MAE: 0.342444, R²: 0.1833
+
+准确率指标:
+  训练集 - Base Hard: 0.4116, Model Hard: 0.7256
+  训练集 - Base Soft: 0.3911, Model Soft: 0.5726
+  训练集 - Base MAD : 0.7716, Model MAD : 0.9327
+  测试集 - Base Hard: 0.3855, Model Hard: 0.5783
+  测试集 - Base Soft: 0.3850, Model Soft: 0.5240
+  测试集 - Base MAD : 0.7822, Model MAD : 0.8859
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_1.csv
+[slice=col_d5 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d5_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006578, MAE: 0.063805, R²: 0.6117
+  测试集 - MSE: 0.017059, MAE: 0.104360, R²: 0.2869
+
+原始空间指标:
+  测试集 - MSE: 0.153532, MAE: 0.313079, R²: 0.2869
+
+准确率指标:
+  训练集 - Base Hard: 0.4116, Model Hard: 0.7439
+  训练集 - Base Soft: 0.3911, Model Soft: 0.5773
+  训练集 - Base MAD : 0.7716, Model MAD : 0.9362
+  测试集 - Base Hard: 0.3855, Model Hard: 0.6145
+  测试集 - Base Soft: 0.3850, Model Soft: 0.5352
+  测试集 - Base MAD : 0.7822, Model MAD : 0.8956
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_2.csv
+[slice=col_d5 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d5_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002967, MAE: 0.040274, R²: 0.8248
+  测试集 - MSE: 0.016491, MAE: 0.098558, R²: 0.3107
+
+原始空间指标:
+  测试集 - MSE: 0.148421, MAE: 0.295673, R²: 0.3107
+
+准确率指标:
+  训练集 - Base Hard: 0.4116, Model Hard: 0.8201
+  训练集 - Base Soft: 0.3911, Model Soft: 0.6222
+  训练集 - Base MAD : 0.7716, Model MAD : 0.9597
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7349
+  测试集 - Base Soft: 0.3850, Model Soft: 0.5681
+  测试集 - Base MAD : 0.7822, Model MAD : 0.9014
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_3.csv
+[slice=col_d5 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d5_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d5_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002910, MAE: 0.036947, R²: 0.8282
+  测试集 - MSE: 0.016742, MAE: 0.101016, R²: 0.3002
+
+原始空间指标:
+  测试集 - MSE: 0.150674, MAE: 0.303049, R²: 0.3002
+
+准确率指标:
+  训练集 - Base Hard: 0.4116, Model Hard: 0.8720
+  训练集 - Base Soft: 0.3911, Model Soft: 0.6151
+  训练集 - Base MAD : 0.7716, Model MAD : 0.9631
+  测试集 - Base Hard: 0.3855, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3850, Model Soft: 0.5397
+  测试集 - Base MAD : 0.7822, Model MAD : 0.8990
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d5_result_seed_4.csv
+[slice=col_d6 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d6_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002938, MAE: 0.037153, R²: 0.8266
+  测试集 - MSE: 0.017005, MAE: 0.102309, R²: 0.2892
+
+原始空间指标:
+  测试集 - MSE: 0.153041, MAE: 0.306928, R²: 0.2892
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.8445
+  训练集 - Base Soft: 0.3982, Model Soft: 0.6175
+  训练集 - Base MAD : 0.7739, Model MAD : 0.9628
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7349
+  测试集 - Base Soft: 0.4038, Model Soft: 0.5407
+  测试集 - Base MAD : 0.7876, Model MAD : 0.8977
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_0.csv
+[slice=col_d6 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d6_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007628, MAE: 0.067805, R²: 0.5497
+  测试集 - MSE: 0.019695, MAE: 0.114488, R²: 0.1768
+
+原始空间指标:
+  测试集 - MSE: 0.177255, MAE: 0.343464, R²: 0.1768
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.7439
+  训练集 - Base Soft: 0.3982, Model Soft: 0.5678
+  训练集 - Base MAD : 0.7739, Model MAD : 0.9322
+  测试集 - Base Hard: 0.4337, Model Hard: 0.6024
+  测试集 - Base Soft: 0.4038, Model Soft: 0.5234
+  测试集 - Base MAD : 0.7876, Model MAD : 0.8855
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_1.csv
+[slice=col_d6 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d6_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006553, MAE: 0.062990, R²: 0.6132
+  测试集 - MSE: 0.017112, MAE: 0.102923, R²: 0.2847
+
+原始空间指标:
+  测试集 - MSE: 0.154010, MAE: 0.308769, R²: 0.2847
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.7317
+  训练集 - Base Soft: 0.3982, Model Soft: 0.5773
+  训练集 - Base MAD : 0.7739, Model MAD : 0.9370
+  测试集 - Base Hard: 0.4337, Model Hard: 0.6627
+  测试集 - Base Soft: 0.4038, Model Soft: 0.5405
+  测试集 - Base MAD : 0.7876, Model MAD : 0.8971
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_2.csv
+[slice=col_d6 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d6_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004186, MAE: 0.050293, R²: 0.7529
+  测试集 - MSE: 0.015578, MAE: 0.098238, R²: 0.3489
+
+原始空间指标:
+  测试集 - MSE: 0.140200, MAE: 0.294714, R²: 0.3489
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.8018
+  训练集 - Base Soft: 0.3982, Model Soft: 0.6088
+  训练集 - Base MAD : 0.7739, Model MAD : 0.9497
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7711
+  测试集 - Base Soft: 0.4038, Model Soft: 0.5702
+  测试集 - Base MAD : 0.7876, Model MAD : 0.9018
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_3.csv
+[slice=col_d6 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d6_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d6_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002025, MAE: 0.025291, R²: 0.8805
+  测试集 - MSE: 0.016691, MAE: 0.098701, R²: 0.3023
+
+原始空间指标:
+  测试集 - MSE: 0.150219, MAE: 0.296104, R²: 0.3023
+
+准确率指标:
+  训练集 - Base Hard: 0.4177, Model Hard: 0.9024
+  训练集 - Base Soft: 0.3982, Model Soft: 0.6246
+  训练集 - Base MAD : 0.7739, Model MAD : 0.9747
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7349
+  测试集 - Base Soft: 0.4038, Model Soft: 0.5479
+  测试集 - Base MAD : 0.7876, Model MAD : 0.9013
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d6_result_seed_4.csv
+[slice=col_d7 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d7_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002742, MAE: 0.036704, R²: 0.8381
+  测试集 - MSE: 0.016115, MAE: 0.098665, R²: 0.3264
+
+原始空间指标:
+  测试集 - MSE: 0.145037, MAE: 0.295994, R²: 0.3264
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8445
+  训练集 - Base Soft: 0.3942, Model Soft: 0.6189
+  训练集 - Base MAD : 0.7740, Model MAD : 0.9633
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7711
+  测试集 - Base Soft: 0.4009, Model Soft: 0.5482
+  测试集 - Base MAD : 0.7929, Model MAD : 0.9013
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_0.csv
+[slice=col_d7 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d7_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006044, MAE: 0.060772, R²: 0.6432
+  测试集 - MSE: 0.017537, MAE: 0.104334, R²: 0.2670
+
+原始空间指标:
+  测试集 - MSE: 0.157831, MAE: 0.313001, R²: 0.2670
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7835
+  训练集 - Base Soft: 0.3942, Model Soft: 0.5797
+  训练集 - Base MAD : 0.7740, Model MAD : 0.9392
+  测试集 - Base Hard: 0.4337, Model Hard: 0.6747
+  测试集 - Base Soft: 0.4009, Model Soft: 0.5396
+  测试集 - Base MAD : 0.7929, Model MAD : 0.8957
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_1.csv
+[slice=col_d7 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d7_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003896, MAE: 0.048512, R²: 0.7700
+  测试集 - MSE: 0.016403, MAE: 0.098315, R²: 0.3144
+
+原始空间指标:
+  测试集 - MSE: 0.147628, MAE: 0.294944, R²: 0.3144
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.7896
+  训练集 - Base Soft: 0.3942, Model Soft: 0.6074
+  训练集 - Base MAD : 0.7740, Model MAD : 0.9515
+  测试集 - Base Hard: 0.4337, Model Hard: 0.6988
+  测试集 - Base Soft: 0.4009, Model Soft: 0.5576
+  测试集 - Base MAD : 0.7929, Model MAD : 0.9017
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_2.csv
+[slice=col_d7 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d7_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.004126, MAE: 0.048977, R²: 0.7564
+  测试集 - MSE: 0.015508, MAE: 0.098352, R²: 0.3518
+
+原始空间指标:
+  测试集 - MSE: 0.139572, MAE: 0.295056, R²: 0.3518
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.8049
+  训练集 - Base Soft: 0.3942, Model Soft: 0.6081
+  训练集 - Base MAD : 0.7740, Model MAD : 0.9510
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7711
+  测试集 - Base Soft: 0.4009, Model Soft: 0.5687
+  测试集 - Base MAD : 0.7929, Model MAD : 0.9016
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_3.csv
+[slice=col_d7 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d7_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d7_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002193, MAE: 0.027330, R²: 0.8705
+  测试集 - MSE: 0.016738, MAE: 0.100862, R²: 0.3004
+
+原始空间指标:
+  测试集 - MSE: 0.150640, MAE: 0.302587, R²: 0.3004
+
+准确率指标:
+  训练集 - Base Hard: 0.4268, Model Hard: 0.9085
+  训练集 - Base Soft: 0.3942, Model Soft: 0.6226
+  训练集 - Base MAD : 0.7740, Model MAD : 0.9727
+  测试集 - Base Hard: 0.4337, Model Hard: 0.7229
+  测试集 - Base Soft: 0.4009, Model Soft: 0.5468
+  测试集 - Base MAD : 0.7929, Model MAD : 0.8991
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d7_result_seed_4.csv
+[slice=col_d8 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d8_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.001825, MAE: 0.024365, R²: 0.8923
+  测试集 - MSE: 0.016466, MAE: 0.100462, R²: 0.3117
+
+原始空间指标:
+  测试集 - MSE: 0.148193, MAE: 0.301385, R²: 0.3117
+
+准确率指标:
+  训练集 - Base Hard: 0.4451, Model Hard: 0.8963
+  训练集 - Base Soft: 0.3967, Model Soft: 0.6259
+  训练集 - Base MAD : 0.7765, Model MAD : 0.9756
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6747
+  测试集 - Base Soft: 0.3662, Model Soft: 0.5439
+  测试集 - Base MAD : 0.7720, Model MAD : 0.8995
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_0.csv
+[slice=col_d8 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d8_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005350, MAE: 0.057267, R²: 0.6842
+  测试集 - MSE: 0.018378, MAE: 0.111006, R²: 0.2318
+
+原始空间指标:
+  测试集 - MSE: 0.165398, MAE: 0.333018, R²: 0.2318
+
+准确率指标:
+  训练集 - Base Hard: 0.4451, Model Hard: 0.7348
+  训练集 - Base Soft: 0.3967, Model Soft: 0.5918
+  训练集 - Base MAD : 0.7765, Model MAD : 0.9427
+  测试集 - Base Hard: 0.3976, Model Hard: 0.5783
+  测试集 - Base Soft: 0.3662, Model Soft: 0.5285
+  测试集 - Base MAD : 0.7720, Model MAD : 0.8890
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_1.csv
+[slice=col_d8 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d8_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.006439, MAE: 0.063815, R²: 0.6199
+  测试集 - MSE: 0.017399, MAE: 0.101643, R²: 0.2727
+
+原始空间指标:
+  测试集 - MSE: 0.156590, MAE: 0.304930, R²: 0.2727
+
+准确率指标:
+  训练集 - Base Hard: 0.4451, Model Hard: 0.7287
+  训练集 - Base Soft: 0.3967, Model Soft: 0.5768
+  训练集 - Base MAD : 0.7765, Model MAD : 0.9362
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6506
+  测试集 - Base Soft: 0.3662, Model Soft: 0.5404
+  测试集 - Base MAD : 0.7720, Model MAD : 0.8984
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_2.csv
+[slice=col_d8 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d8_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002078, MAE: 0.028619, R²: 0.8773
+  测试集 - MSE: 0.015795, MAE: 0.097345, R²: 0.3398
+
+原始空间指标:
+  测试集 - MSE: 0.142156, MAE: 0.292036, R²: 0.3398
+
+准确率指标:
+  训练集 - Base Hard: 0.4451, Model Hard: 0.8963
+  训练集 - Base Soft: 0.3967, Model Soft: 0.6248
+  训练集 - Base MAD : 0.7765, Model MAD : 0.9714
+  测试集 - Base Hard: 0.3976, Model Hard: 0.7470
+  测试集 - Base Soft: 0.3662, Model Soft: 0.5691
+  测试集 - Base MAD : 0.7720, Model MAD : 0.9027
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_3.csv
+[slice=col_d8 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d8_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d8_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.003708, MAE: 0.044907, R²: 0.7811
+  测试集 - MSE: 0.016995, MAE: 0.104411, R²: 0.2896
+
+原始空间指标:
+  测试集 - MSE: 0.152954, MAE: 0.313234, R²: 0.2896
+
+准确率指标:
+  训练集 - Base Hard: 0.4451, Model Hard: 0.8232
+  训练集 - Base Soft: 0.3967, Model Soft: 0.6072
+  训练集 - Base MAD : 0.7765, Model MAD : 0.9551
+  测试集 - Base Hard: 0.3976, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3662, Model Soft: 0.5375
+  测试集 - Base MAD : 0.7720, Model MAD : 0.8956
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d8_result_seed_4.csv
+[slice=col_d9 seed=0 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_0.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d9_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d9_norm
+  Random state: 0
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002903, MAE: 0.038182, R²: 0.8286
+  测试集 - MSE: 0.016532, MAE: 0.099675, R²: 0.3090
+
+原始空间指标:
+  测试集 - MSE: 0.148784, MAE: 0.299025, R²: 0.3090
+
+准确率指标:
+  训练集 - Base Hard: 0.4207, Model Hard: 0.8354
+  训练集 - Base Soft: 0.3988, Model Soft: 0.6164
+  训练集 - Base MAD : 0.7756, Model MAD : 0.9618
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3927, Model Soft: 0.5414
+  测试集 - Base MAD : 0.7872, Model MAD : 0.9003
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_0.csv
+[slice=col_d9 seed=1 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_1.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d9_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d9_norm
+  Random state: 1
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.007420, MAE: 0.067735, R²: 0.5620
+  测试集 - MSE: 0.018752, MAE: 0.114268, R²: 0.2162
+
+原始空间指标:
+  测试集 - MSE: 0.168767, MAE: 0.342804, R²: 0.2162
+
+准确率指标:
+  训练集 - Base Hard: 0.4207, Model Hard: 0.7073
+  训练集 - Base Soft: 0.3988, Model Soft: 0.5732
+  训练集 - Base MAD : 0.7756, Model MAD : 0.9323
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6386
+  测试集 - Base Soft: 0.3927, Model Soft: 0.5243
+  测试集 - Base MAD : 0.7872, Model MAD : 0.8857
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_1.csv
+[slice=col_d9 seed=2 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_2.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d9_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d9_norm
+  Random state: 2
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.005155, MAE: 0.057185, R²: 0.6957
+  测试集 - MSE: 0.016648, MAE: 0.097674, R²: 0.3041
+
+原始空间指标:
+  测试集 - MSE: 0.149832, MAE: 0.293021, R²: 0.3041
+
+准确率指标:
+  训练集 - Base Hard: 0.4207, Model Hard: 0.7683
+  训练集 - Base Soft: 0.3988, Model Soft: 0.5961
+  训练集 - Base MAD : 0.7756, Model MAD : 0.9428
+  测试集 - Base Hard: 0.4458, Model Hard: 0.6988
+  测试集 - Base Soft: 0.3927, Model Soft: 0.5507
+  测试集 - Base MAD : 0.7872, Model MAD : 0.9023
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_2.csv
+[slice=col_d9 seed=3 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_3.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d9_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d9_norm
+  Random state: 3
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.011870, MAE: 0.087353, R²: 0.2993
+  测试集 - MSE: 0.024661, MAE: 0.120633, R²: -0.0308
+
+原始空间指标:
+  测试集 - MSE: 0.221949, MAE: 0.361900, R²: -0.0308
+
+准确率指标:
+  训练集 - Base Hard: 0.4207, Model Hard: 0.6372
+  训练集 - Base Soft: 0.3988, Model Soft: 0.5435
+  训练集 - Base MAD : 0.7756, Model MAD : 0.9126
+  测试集 - Base Hard: 0.4458, Model Hard: 0.5422
+  测试集 - Base Soft: 0.3927, Model Soft: 0.5203
+  测试集 - Base MAD : 0.7872, Model MAD : 0.8794
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_3.csv
+[slice=col_d9 seed=4 dim=8] -> group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_4.csv
+/Users/lijiang/miniconda3/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:609: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+Using custom LLM field: gpt-4o_col_d9_norm
+============================================================
+Running variant experiment: x_all_llm + mlp
+============================================================
+Loading parquet file: dataset/EEDI/aggreated/eedi_train.parquet
+Loaded 328 samples from parquet
+Loading parquet file: dataset/EEDI/aggreated/eedi_test.parquet
+Loaded 83 samples from parquet
+Data format: Average
+Train samples: 328, Test samples: 83
+Preparing features (variant=x_all_llm)...
+  Using LLM field: gpt-4o_col_d9_norm
+  Random state: 4
+  LLM sampling strategy: all
+  LLM vector transform: raw
+  LLM dim for x_all_llm: 8 (max available: 8)
+Debug: X=328, y=328, orig=328, ranges=328, baseline=328
+Debug: X=83, y=83, orig=83, ranges=83, baseline=83
+Train: (328, 264), Test: (83, 264)
+Training model (mlp)...
+Device: cpu
+MLP on CPU: using sklearn MLPRegressor for stability.
+
+============================================================
+结果: x_all_llm + mlp
+============================================================
+
+归一化空间指标:
+  训练集 - MSE: 0.002372, MAE: 0.028483, R²: 0.8600
+  测试集 - MSE: 0.017015, MAE: 0.103004, R²: 0.2888
+
+原始空间指标:
+  测试集 - MSE: 0.153139, MAE: 0.309011, R²: 0.2888
+
+准确率指标:
+  训练集 - Base Hard: 0.4207, Model Hard: 0.8994
+  训练集 - Base Soft: 0.3988, Model Soft: 0.6222
+  训练集 - Base MAD : 0.7756, Model MAD : 0.9715
+  测试集 - Base Hard: 0.4458, Model Hard: 0.7229
+  测试集 - Base Soft: 0.3927, Model Soft: 0.5438
+  测试集 - Base MAD : 0.7872, Model MAD : 0.8970
+Results saved to: results/group/EEDI/slice_ablation/aggreated_eedi_col_d9_result_seed_4.csv
+
+Done. CSV count:
+90

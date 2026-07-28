@@ -1,0 +1,24 @@
+{
+  "sample_level": "individual",
+  "train_samples": 7549,
+  "test_samples": 1888,
+  "features": [
+    "Variable_Name",
+    "Question",
+    "score_range_min",
+    "score_range_max",
+    "Question_Embedding",
+    "Demographic_Embedding",
+    "LLM_Responses",
+    "LLM_Responses_norm",
+    "LLM_Responses_count",
+    "Average_LLM_Response_norm",
+    "Human_Response",
+    "Human_Response_norm",
+    "twin_id"
+  ],
+  "train_file": "dataset/OpinionQA/individual/individual_train.parquet",
+  "test_file": "dataset/OpinionQA/individual/individual_test.parquet",
+  "test_size": 0.2,
+  "random_state": 42
+}

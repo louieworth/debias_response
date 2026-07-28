@@ -1,0 +1,49 @@
+{
+  "individual": {
+    "train_samples": 8016,
+    "test_samples": 2004,
+    "train_unique_twin_id": 167,
+    "test_unique_twin_id": 167,
+    "train_unique_questions": 60,
+    "test_unique_questions": 60,
+    "train_file": "dataset/Twin-2K-500/individual/individual_train.parquet",
+    "test_file": "dataset/Twin-2K-500/individual/individual_test.parquet"
+  },
+  "group_by_twin": {
+    "train_samples": 7980,
+    "test_samples": 2040,
+    "train_unique_twin_id": 133,
+    "test_unique_twin_id": 34,
+    "train_unique_questions": 60,
+    "test_unique_questions": 60,
+    "group_overlap_twin_id": 0,
+    "train_file": "dataset/Twin-2K-500/individual/group_by_twin_train.parquet",
+    "test_file": "dataset/Twin-2K-500/individual/group_by_twin_test.parquet"
+  },
+  "group_by_question": {
+    "train_samples": 8016,
+    "test_samples": 2004,
+    "train_unique_twin_id": 167,
+    "test_unique_twin_id": 167,
+    "train_unique_questions": 48,
+    "test_unique_questions": 12,
+    "group_overlap_questions": 0,
+    "train_file": "dataset/Twin-2K-500/individual/group_by_question_train.parquet",
+    "test_file": "dataset/Twin-2K-500/individual/group_by_question_test.parquet"
+  },
+  "group_by_twin_question": {
+    "train_samples": 6384,
+    "test_samples": 408,
+    "dropped_samples": 3228,
+    "train_unique_twin_id": 133,
+    "test_unique_twin_id": 34,
+    "train_unique_questions": 48,
+    "test_unique_questions": 12,
+    "group_overlap_twin_id": 0,
+    "group_overlap_questions": 0,
+    "heldout_twin_id_count": 34,
+    "heldout_question_count": 12,
+    "train_file": "dataset/Twin-2K-500/individual/group_by_twin_question_train.parquet",
+    "test_file": "dataset/Twin-2K-500/individual/group_by_twin_question_test.parquet"
+  }
+}

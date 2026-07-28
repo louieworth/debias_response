@@ -1,0 +1,49 @@
+{
+  "individual": {
+    "train_samples": 7549,
+    "test_samples": 1888,
+    "train_unique_twin_id": 200,
+    "test_unique_twin_id": 197,
+    "train_unique_questions": 385,
+    "test_unique_questions": 368,
+    "train_file": "dataset/OpinionQA/individual/individual_train.parquet",
+    "test_file": "dataset/OpinionQA/individual/individual_test.parquet"
+  },
+  "group_by_twin": {
+    "train_samples": 7748,
+    "test_samples": 1689,
+    "train_unique_twin_id": 160,
+    "test_unique_twin_id": 40,
+    "train_unique_questions": 385,
+    "test_unique_questions": 376,
+    "group_overlap_twin_id": 0,
+    "train_file": "dataset/OpinionQA/individual/group_by_twin_train.parquet",
+    "test_file": "dataset/OpinionQA/individual/group_by_twin_test.parquet"
+  },
+  "group_by_question": {
+    "train_samples": 7609,
+    "test_samples": 1828,
+    "train_unique_twin_id": 200,
+    "test_unique_twin_id": 197,
+    "train_unique_questions": 308,
+    "test_unique_questions": 77,
+    "group_overlap_questions": 0,
+    "train_file": "dataset/OpinionQA/individual/group_by_question_train.parquet",
+    "test_file": "dataset/OpinionQA/individual/group_by_question_test.parquet"
+  },
+  "group_by_twin_question": {
+    "train_samples": 6144,
+    "test_samples": 332,
+    "dropped_samples": 2961,
+    "train_unique_twin_id": 160,
+    "test_unique_twin_id": 40,
+    "train_unique_questions": 308,
+    "test_unique_questions": 70,
+    "group_overlap_twin_id": 0,
+    "group_overlap_questions": 0,
+    "heldout_twin_id_count": 40,
+    "heldout_question_count": 77,
+    "train_file": "dataset/OpinionQA/individual/group_by_twin_question_train.parquet",
+    "test_file": "dataset/OpinionQA/individual/group_by_twin_question_test.parquet"
+  }
+}

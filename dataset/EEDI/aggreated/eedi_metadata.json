@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "purpose": "Canonical EEDI population-level dataset",
+  "rows": {
+    "train": 329,
+    "test": 83,
+    "total": 412
+  },
+  "unique_questions": {
+    "train": 329,
+    "test": 83,
+    "union": 412,
+    "train_test_overlap": 0
+  },
+  "question_embedding_dimension": 256,
+  "partial_model_imputation": {
+    "question": "EEDI_552",
+    "missing_model": "mistral-7B-instruct-v0.3",
+    "strategy": "equal_weight_mean_of_available_canonical_model_means",
+    "available_model_count": 7,
+    "imputed_raw_value": 2.1342424242424243,
+    "imputed_slot_count": 50,
+    "source_summary": {
+      "claude-3.5-haiku": {
+        "source_file": "LLM_responses/claude-3.5-haiku_converted.json",
+        "source_slots": 50,
+        "valid_slots": 50,
+        "source_mean": 2.08
+      },
+      "deepseek-v3": {
+        "source_file": "LLM_responses/deepseek-v3_converted.json",
+        "source_slots": 100,
+        "valid_slots": 99,
+        "source_mean": 1.9696969696969697
+      },
+      "gpt-3.5-turbo": {
+        "source_file": "LLM_responses/gpt-3.5-turbo_converted.json",
+        "source_slots": 50,
+        "valid_slots": 50,
+        "source_mean": 2.42
+      },
+      "gpt-4o": {
+        "source_file": "LLM_responses/gpt-4o_converted.json.bak",
+        "source_slots": 100,
+        "valid_slots": 100,
+        "source_mean": 2.53
+      },
+      "gpt-4o-mini": {
+        "source_file": "LLM_responses/gpt-4o-mini_converted.json",
+        "source_slots": 50,
+        "valid_slots": 50,
+        "source_mean": 1.92
+      },
+      "gpt-5-mini": {
+        "source_file": "LLM_responses/gpt-5-mini_converted.json",
+        "source_slots": 100,
+        "valid_slots": 100,
+        "source_mean": 2.02
+      },
+      "llama-3.3-70B-instruct-turbo": {
+        "source_file": "LLM_responses/llama-3.3-70B-instruct-turbo_converted.json",
+        "source_slots": 50,
+        "valid_slots": 50,
+        "source_mean": 2.0
+      },
+      "mistral-7B-instruct-v0.3": {
+        "source_file": "LLM_responses/mistral-7B-instruct-v0.3_converted.json",
+        "source_slots": 50,
+        "valid_slots": 0,
+        "source_mean": null
+      }
+    },
+    "imputed_normalized_value": 0.3780808080808081,
+    "human_response_count": 9,
+    "average_human_response": 2.119,
+    "assigned_split": "train"
+  },
+  "output": {
+    "train": {
+      "path": "dataset/EEDI/aggreated/eedi_train.parquet",
+      "sha256": "2810f86c860d6d4da92505ee6d1d7ffd66c3cdae0277cf3627cf60ae9875e48b",
+      "size_bytes": 797423
+    },
+    "test": {
+      "path": "dataset/EEDI/aggreated/eedi_test.parquet",
+      "sha256": "a2709e8cb8056ad90acfb0dea5e9efe9d8fe2cfb69371e1966466fd50b539613",
+      "size_bytes": 210752
+    },
+    "flat": {
+      "path": "dataset/EEDI/aggreated/eedi_flat.json",
+      "sha256": "5f5c7b91403eee5db5e3061fc47f9acdf396251310cbffb7f7921e6bc8cdf50e",
+      "size_bytes": 9269864
+    }
+  },
+  "paper_population_gpt4o": {
+    "model": "gpt-4o",
+    "source_file": "LLM_responses/gpt-4o_converted.json.bak",
+    "source_sha256": "b468810f9977fc494de442a3545196aa0e15d8610514f3b485e882da40716b44",
+    "source_slots_per_question": 100,
+    "rollout_size": 50,
+    "selection": "first_50_after_full_100_slot_median_fill",
+    "slot_selection_is_random_per_question": false,
+    "mapping_file": "LLM_responses/synthetic_profile_to_twin_id.json.bak",
+    "selected_slot_persona_counts": {
+      "1": 7,
+      "2": 2,
+      "3": 6,
+      "4": 5,
+      "5": 15,
+      "6": 4,
+      "7": 4,
+      "8": 7
+    },
+    "questions": 412,
+    "questions_with_internal_nulls": 27,
+    "internal_null_slots_filled": 107
+  }
+}

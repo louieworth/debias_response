@@ -1,0 +1,45 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local agent and editor state
+.agents/
+.codex/
+.claude/
+worktrees/
+queue/
+
+# Generated runtime artifacts
+gen_results/
+outputs/
+logs/
+results/
+
+# Development-only files
+dev/
+autoresearch/
+overleaf/
+
+# Maintained as an independent Overleaf Git repository
+paper/
+
+# Agent prompt files
+AGENTS.md
+CLAUDE.md

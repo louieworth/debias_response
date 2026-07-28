@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-07-26T23:50:46.233761+00:00",
+  "purpose": "Canonical Twin population dataset",
+  "canonical": true,
+  "embedding": {
+    "provider": "OpenAI",
+    "model": "text-embedding-3-small",
+    "dimensions": 256,
+    "input_field": "Question"
+  },
+  "legacy_512_source": {
+    "train": {
+      "former_path": "dataset/Twin-2K-500/aggreated/twin_train.parquet",
+      "path_reused_by_canonical_256": true,
+      "removed": true,
+      "sha256": "021fc261d5e8116c557e50efbbcd8cd2d3f0c4298d137f7bcc8fc21d587d396a"
+    },
+    "test": {
+      "former_path": "dataset/Twin-2K-500/aggreated/twin_test.parquet",
+      "path_reused_by_canonical_256": true,
+      "removed": true,
+      "sha256": "285409fcd04b5a47f915d4d7f1e5b5aef81cb4209481b00afcc4292118fb19b3"
+    }
+  },
+  "output": {
+    "train": {
+      "path": "dataset/Twin-2K-500/aggreated/twin_train.parquet",
+      "sha256": "681c1eb71c1edd07f3a7024cb9f24da504bc6fc0dc353e948a729334e04cbd23"
+    },
+    "test": {
+      "path": "dataset/Twin-2K-500/aggreated/twin_test.parquet",
+      "sha256": "018983e070703a97e0b3331bff56bcace4ce171bb919d2089607f553d8ae81ef"
+    }
+  },
+  "validation": {
+    "train": {
+      "rows": 207,
+      "embedding_dimension": 256,
+      "embedding_l2_norm_min": 0.9994043707847595,
+      "embedding_l2_norm_max": 1.000670313835144,
+      "all_non_embedding_columns_exactly_equal": true
+    },
+    "test": {
+      "rows": 52,
+      "embedding_dimension": 256,
+      "embedding_l2_norm_min": 0.9995209574699402,
+      "embedding_l2_norm_max": 1.0004911422729492,
+      "all_non_embedding_columns_exactly_equal": true
+    }
+  }
+}

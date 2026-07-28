@@ -1,0 +1,49 @@
+{
+  "individual": {
+    "train_samples": 2783,
+    "test_samples": 696,
+    "train_unique_twin_id": 9,
+    "test_unique_twin_id": 9,
+    "train_unique_questions": 412,
+    "test_unique_questions": 351,
+    "train_file": "dataset/EEDI/individual/individual_train.parquet",
+    "test_file": "dataset/EEDI/individual/individual_test.parquet"
+  },
+  "group_by_twin": {
+    "train_samples": 2655,
+    "test_samples": 824,
+    "train_unique_twin_id": 7,
+    "test_unique_twin_id": 2,
+    "train_unique_questions": 412,
+    "test_unique_questions": 412,
+    "group_overlap_twin_id": 0,
+    "train_file": "dataset/EEDI/individual/group_by_twin_train.parquet",
+    "test_file": "dataset/EEDI/individual/group_by_twin_test.parquet"
+  },
+  "group_by_question": {
+    "train_samples": 2777,
+    "test_samples": 702,
+    "train_unique_twin_id": 9,
+    "test_unique_twin_id": 9,
+    "train_unique_questions": 329,
+    "test_unique_questions": 83,
+    "group_overlap_questions": 0,
+    "train_file": "dataset/EEDI/individual/group_by_question_train.parquet",
+    "test_file": "dataset/EEDI/individual/group_by_question_test.parquet"
+  },
+  "group_by_twin_question": {
+    "train_samples": 2125,
+    "test_samples": 166,
+    "dropped_samples": 1188,
+    "train_unique_twin_id": 7,
+    "test_unique_twin_id": 2,
+    "train_unique_questions": 329,
+    "test_unique_questions": 83,
+    "group_overlap_twin_id": 0,
+    "group_overlap_questions": 0,
+    "heldout_twin_id_count": 2,
+    "heldout_question_count": 83,
+    "train_file": "dataset/EEDI/individual/group_by_twin_question_train.parquet",
+    "test_file": "dataset/EEDI/individual/group_by_twin_question_test.parquet"
+  }
+}
