@@ -96,7 +96,7 @@ dataset_defaults() {
             : "${TEST_FILE:=dataset/Twin-2K-500/aggreated/twin_test.parquet}"
             : "${RESULT_SUBDIR:=group/twin/aggreated}"
             : "${RESULT_BASENAME:=aggreated_twin_256_multisource_result.csv}"
-            : "${LLM_FIELDS_CSV:=gpt-4_norm,deepseek-r1_norm,claude-opus-4-6_norm,doubao-seed-2.0-pro_norm,glm-4.7_norm,gpt-5.4_norm,qwen3-max_norm}"
+            : "${LLM_FIELDS_CSV:=claude-3.5-haiku_norm,deepseek-v3_norm,gpt-3.5-turbo_norm,gpt-4o-mini_norm,gpt-4o_norm,gpt-5-mini_norm,llama-3.3-70B-instruct-turbo_norm,mistral-7B-instruct-v0.3_norm}"
             ;;
         EEDI)
             : "${TRAIN_FILE:=dataset/EEDI/aggreated/eedi_train.parquet}"

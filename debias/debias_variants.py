@@ -1684,7 +1684,7 @@ if __name__ == "__main__":
         default=None,
         help=(
             "Comma-separated custom LLM response fields to concatenate in order "
-            "(e.g., 'gpt-4_norm,deepseek-r1_norm'). "
+            "(e.g., 'gpt-4o_norm,deepseek-v3_norm'). "
             "Used for multi-source x_all_llm / x_avg_llm ablations."
         )
     )

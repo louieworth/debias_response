@@ -43,7 +43,7 @@ SAMPLE_LLM_DIM="${SAMPLE_LLM_DIM:-}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HELPER_SCRIPT="$SCRIPT_DIR/ablation/run_multisource_ablation.sh"
 
-DEFAULT_LLM_FIELDS="gpt-4o_norm,gpt-4_norm,deepseek-r1_norm,claude-opus-4-6_norm,doubao-seed-2.0-pro_norm,glm-4.7_norm,gpt-5.4_norm,qwen3-max_norm"
+DEFAULT_LLM_FIELDS="claude-3.5-haiku_norm,deepseek-v3_norm,gpt-3.5-turbo_norm,gpt-4o-mini_norm,gpt-4o_norm,gpt-5-mini_norm,llama-3.3-70B-instruct-turbo_norm,mistral-7B-instruct-v0.3_norm"
 
 # DEFAULT_LLM_FIELDS="gpt-4o_norm"
 

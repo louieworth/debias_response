@@ -21,7 +21,7 @@ def process_and_normalize_final():
         PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
     except NameError:
         PROJECT_ROOT = os.path.abspath('.')
-    model = 'DeepSeek-R1'
+    model = 'DeepSeek-V3'
     SIMULATION_CSV_PATH = os.path.join(PROJECT_ROOT, 'dataset', model, 'simulated_responses_consolidated.csv')
     SURVEY_JSON_PATH = os.path.join(PROJECT_ROOT, 'dataset', model, 'likert_question_final.json')
     OUTPUT_JSON_PATH = os.path.join(PROJECT_ROOT, 'dataset', model, 'likert_question_final.json') # New output file

@@ -1,6 +1,7 @@
 # Secrets and local configuration
 .env
 .env.*
+.env.example
 !.env.example
 
 # macOS
@@ -31,6 +32,10 @@ gen_results/
 outputs/
 logs/
 results/
+dataset/Twin-2K-500/filtered
+dataset/Twin-2K-500/raw
+dataset/DATA_SCALE_AUDIT.md
+dataset/Twin-2K-500/filtered_new
 
 # Development-only files
 dev/

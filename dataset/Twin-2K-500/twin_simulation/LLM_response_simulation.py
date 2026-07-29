@@ -38,13 +38,14 @@ MAX_RETRY_SLEEP_SECONDS = 120
 # Select the concrete model here.
 # API keys should still be provided via .env.
 # Examples:
-# - "claude-opus-4-6"
-# - "doubao-seed-2.0-pro"
-# - "glm-4.7"
-# - "deepseek-v3.2"
-# - "qwen3-max"
+# - "claude-3.5-haiku"
+# - "deepseek-v3"
+# - "gpt-3.5-turbo"
+# - "gpt-4o-mini"
 # - "gpt-4o"
-# - "gpt-5.4"
+# - "gpt-5-mini"
+# - "llama-3.3-70B-instruct-turbo"
+# - "mistral-7B-instruct-v0.3"
 LLM_VARIANT = os.getenv("LLM_VARIANT", "gpt-4o")
 
 # --- PATH SETUP ---
@@ -73,13 +74,14 @@ MAX_OUTPUT_TOKENS = int(os.getenv("LLM_MAX_OUTPUT_TOKENS", "1024"))
 # Per-request timeout in seconds
 LLM_TIMEOUT_SECONDS = int(os.getenv("LLM_TIMEOUT_SECONDS", "120"))
 
-SUPPORTED_PROVIDERS = {"claude", "ark", "qwen", "openai"}
+SUPPORTED_PROVIDERS = {"claude", "ark", "qwen", "openai", "together"}
 
 PROVIDER_DEFAULT_MAX_WORKERS = {
     "claude": 1,
     "ark": 4,
     "qwen": 2,
     "openai": 4,
+    "together": 4,
 }
 
 PROVIDER_DEFAULT_MIN_REQUEST_INTERVAL_SECONDS = {
@@ -87,6 +89,7 @@ PROVIDER_DEFAULT_MIN_REQUEST_INTERVAL_SECONDS = {
     "ark": 0.25,
     "qwen": 0.5,
     "openai": 0.25,
+    "together": 0.25,
 }
 
 QWEN_BASE_URLS = {
@@ -98,12 +101,23 @@ QWEN_BASE_URLS = {
 ARK_DEFAULT_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL")
+TOGETHER_BASE_URL = os.getenv("TOGETHER_BASE_URL", "https://api.together.xyz/v1")
 
-ARK_MODEL_ALIASES = {
-    # Coding-Plan style names -> regular online inference model IDs.
-    "doubao-seed-2.0-pro": "doubao-seed-2-0-pro-260215",
-    "glm-4.7": "glm-4-7-251222",
-    "deepseek-v3.2": "deepseek-v3-2-251201",
+MODEL_REGISTRY = {
+    "claude-3.5-haiku": ("claude", "claude-3-5-haiku-20241022"),
+    "deepseek-v3": ("together", "deepseek-ai/DeepSeek-V3"),
+    "gpt-3.5-turbo": ("openai", "gpt-3.5-turbo-0125"),
+    "gpt-4o-mini": ("openai", "gpt-4o-mini-2024-07-18"),
+    "gpt-4o": ("openai", "gpt-4o-2024-11-20"),
+    "gpt-5-mini": ("openai", "gpt-5-mini-2025-08-07"),
+    "llama-3.3-70b-instruct-turbo": (
+        "together",
+        "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    ),
+    "mistral-7b-instruct-v0.3": (
+        "together",
+        "mistralai/Mistral-7B-Instruct-v0.3",
+    ),
 }
 
 
@@ -117,10 +131,6 @@ def _slugify(text):
     return re.sub(r"[^a-z0-9._-]+", "_", text.strip().lower()).strip("_")
 
 
-def _resolve_ark_model_name(variant_key):
-    return ARK_MODEL_ALIASES.get(variant_key, variant_key)
-
-
 LLM_VARIANT_KEY = LLM_VARIANT.strip().lower()
 LLM_PROVIDER_OVERRIDE = os.getenv("LLM_PROVIDER", "").strip().lower() or None
 
@@ -131,29 +141,13 @@ if LLM_PROVIDER_OVERRIDE:
             f"Choose from: {sorted(SUPPORTED_PROVIDERS)}"
         )
     LLM_PROVIDER = LLM_PROVIDER_OVERRIDE
-    MODEL_NAME = _resolve_ark_model_name(LLM_VARIANT_KEY) if LLM_PROVIDER == "ark" else LLM_VARIANT.strip()
-elif LLM_VARIANT_KEY.startswith("claude"):
-    LLM_PROVIDER = "claude"
-    MODEL_NAME = LLM_VARIANT_KEY
-elif (
-    LLM_VARIANT_KEY.startswith("doubao")
-    or LLM_VARIANT_KEY.startswith("glm-")
-    or LLM_VARIANT_KEY.startswith("deepseek-")
-):
-    LLM_PROVIDER = "ark"
-    MODEL_NAME = _resolve_ark_model_name(LLM_VARIANT_KEY)
-elif LLM_VARIANT_KEY.startswith("qwen"):
-    LLM_PROVIDER = "qwen"
-    MODEL_NAME = LLM_VARIANT_KEY
-elif LLM_VARIANT_KEY.startswith("gpt-"):
-    LLM_PROVIDER = "openai"
-    MODEL_NAME = LLM_VARIANT_KEY
+    MODEL_NAME = LLM_VARIANT.strip()
+elif LLM_VARIANT_KEY in MODEL_REGISTRY:
+    LLM_PROVIDER, MODEL_NAME = MODEL_REGISTRY[LLM_VARIANT_KEY]
 else:
     raise ValueError(
         f"Unsupported LLM_VARIANT={LLM_VARIANT!r}. "
-        "Use a concrete model name such as 'claude-opus-4-6', "
-        "'doubao-seed-2.0-pro', 'glm-4.7', 'deepseek-v3.2', 'qwen3-max', "
-        "'gpt-4o', or 'gpt-5'."
+        f"Choose from: {sorted(MODEL_REGISTRY)}"
     )
 
 if LLM_PROVIDER not in SUPPORTED_PROVIDERS:
@@ -215,6 +209,9 @@ def _resolve_api_key(provider):
     elif provider == "openai":
         api_key = os.getenv("OPENAI_API_KEY") or os.getenv("LLM_API_KEY")
         env_name = "OPENAI_API_KEY"
+    elif provider == "together":
+        api_key = os.getenv("TOGETHER_API_KEY") or os.getenv("LLM_API_KEY")
+        env_name = "TOGETHER_API_KEY"
     else:
         api_key = os.getenv("DASHSCOPE_API_KEY") or os.getenv("LLM_API_KEY")
         env_name = "DASHSCOPE_API_KEY"
@@ -298,8 +295,6 @@ def _chunk_list(items, chunk_size):
 def _get_openai_reasoning_effort(model):
     if OPENAI_REASONING_EFFORT:
         return OPENAI_REASONING_EFFORT
-    if model.startswith("gpt-5.4"):
-        return "none"
     if model.startswith("gpt-5.1"):
         return "none"
     if model.startswith("gpt-5-pro"):
@@ -452,6 +447,14 @@ def _get_openai_client():
     return openai.OpenAI(**client_kwargs)
 
 
+def _get_together_client():
+    return openai.OpenAI(
+        api_key=_resolve_api_key("together"),
+        base_url=TOGETHER_BASE_URL,
+        timeout=LLM_TIMEOUT_SECONDS,
+    )
+
+
 def _call_claude(prompt, model, temperature):
     payload = {
         "model": model,
@@ -507,6 +510,19 @@ def _call_qwen(prompt, model, temperature):
         "usage": _serialize_for_debug(getattr(response, "usage", None)),
     }
     return (message.content or "").strip(), debug_payload
+
+
+def _call_together(prompt, model, temperature):
+    request_kwargs = {
+        "model": model,
+        "messages": [{"role": "user", "content": _build_json_prompt(prompt)}],
+        "temperature": temperature,
+        "max_tokens": MAX_OUTPUT_TOKENS,
+        "response_format": {"type": "json_object"},
+    }
+    _throttle_request_start()
+    response = _get_together_client().chat.completions.create(**request_kwargs)
+    return (response.choices[0].message.content or "").strip()
 
 
 def _call_openai_responses(prompt, model, temperature):
@@ -574,6 +590,10 @@ def get_json_response(prompt, model=MODEL_NAME, temperature=TEMPERATURE, debug_c
                 response_content = _call_ark(prompt, model=model, temperature=temperature)
             elif LLM_PROVIDER == "openai":
                 response_content = _call_openai(prompt, model=model, temperature=temperature)
+            elif LLM_PROVIDER == "together":
+                response_content = _call_together(
+                    prompt, model=model, temperature=temperature
+                )
             else:
                 response_content, raw_debug_payload = _call_qwen(prompt, model=model, temperature=temperature)
 
