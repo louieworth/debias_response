@@ -221,6 +221,10 @@ def main() -> int:
         source_metadata.get("llm_features", {})
         .get("new_question_generation", {})
     )
+    legacy_vector_resampling = (
+        source_metadata.get("llm_features", {})
+        .get("legacy_vector_resampling", {})
+    )
     model_provenance = {
         field: source_generation[field]
         for field in RAW_LLM_FIELDS
@@ -252,6 +256,7 @@ def main() -> int:
                 "(canonical_max - canonical_min)"
             ),
             "model_provenance_for_new_20_questions": model_provenance,
+            "legacy_vector_resampling": legacy_vector_resampling,
         },
         "embedding": {
             "provider": "OpenAI",

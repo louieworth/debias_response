@@ -1,0 +1,398 @@
+{
+  "schema_version": 3,
+  "created_utc": "2026-07-30T03:42:12.812854+00:00",
+  "purpose": "Canonical Twin population-level strict Likert dataset with 279 questions",
+  "canonical": true,
+  "question_universe": {
+    "definition": "strict Likert-type ordinal opinion questions",
+    "rows": 279,
+    "legacy_259_retained": 259,
+    "new_questions_added": 20,
+    "source_counts": {
+      "strict_unique_questions": 279,
+      "strict_source_targets_before_duplicate_merge": 281,
+      "matrix_likert_unique_items": 259,
+      "ordered_mc_unique_items": 20,
+      "legacy_259_retained": 259,
+      "new_items_added": 20,
+      "full_panel_questions": 249,
+      "partial_panel_questions": 30,
+      "human_response_rows": 553461,
+      "catalog_question_ids": 40
+    }
+  },
+  "split": {
+    "method": "target-family stratified whole-parent-group split",
+    "seed": 42,
+    "train_rows": 223,
+    "test_rows": 56,
+    "test_fraction": 0.2007168458781362,
+    "parent_group_leakage": false,
+    "by_target_family": {
+      "matrix_likert": {
+        "total_rows": 259,
+        "target_test_rows": 52,
+        "actual_test_rows": 52,
+        "train_rows": 207,
+        "total_parent_groups": 19,
+        "test_parent_groups": 5
+      },
+      "mc_single": {
+        "total_rows": 20,
+        "target_test_rows": 4,
+        "actual_test_rows": 4,
+        "train_rows": 16,
+        "total_parent_groups": 20,
+        "test_parent_groups": 4
+      }
+    }
+  },
+  "llm_source_schema": {
+    "compatibility_target": "dataset/OpinionQA/aggreated",
+    "raw_field_order": [
+      "claude-3.5-haiku",
+      "deepseek-v3",
+      "gpt-3.5-turbo",
+      "gpt-4o-mini",
+      "gpt-4o",
+      "gpt-5-mini",
+      "llama-3.3-70B-instruct-turbo",
+      "mistral-7B-instruct-v0.3"
+    ],
+    "normalized_field_order": [
+      "claude-3.5-haiku_norm",
+      "deepseek-v3_norm",
+      "gpt-3.5-turbo_norm",
+      "gpt-4o-mini_norm",
+      "gpt-4o_norm",
+      "gpt-5-mini_norm",
+      "llama-3.3-70B-instruct-turbo_norm",
+      "mistral-7B-instruct-v0.3_norm"
+    ],
+    "normalized_fields_follow_raw_fields": true,
+    "normalization": "(response - canonical_min) / (canonical_max - canonical_min)",
+    "model_provenance_for_new_20_questions": {
+      "claude-3.5-haiku": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/claude-3.5-haiku.jsonl",
+        "cache_sha256": "63f2a1491f253c6891e62af9b7d11af41fe06cbb94c7a2e9407707a573a76d73",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "anthropic",
+        "requested_model": "claude-haiku-4-5-20251001",
+        "response_models": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "deepseek-v3": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/deepseek-v3.jsonl",
+        "cache_sha256": "0d062111cbfd43e0e98dd3db7df795a12ead827ca6aa71a586900a0b792e2bb5",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "deepseek_official",
+        "requested_model": "deepseek-v4-flash",
+        "response_models": [
+          "deepseek-v4-flash"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "gpt-3.5-turbo": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/gpt-3.5-turbo.jsonl",
+        "cache_sha256": "a0f012713bbc62eacec02b5b604b06838e484323d3a65be6ab6b729007cdc311",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "openai_chat",
+        "requested_model": "gpt-3.5-turbo-0125",
+        "response_models": [
+          "gpt-3.5-turbo-0125"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "gpt-4o-mini": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/gpt-4o-mini.jsonl",
+        "cache_sha256": "d1998c17303408aa111b6c5b97c12b850d5cb6eb87338bc6663778f9a0b8ebc7",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "openai_chat",
+        "requested_model": "gpt-4o-mini-2024-07-18",
+        "response_models": [
+          "gpt-4o-mini-2024-07-18"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "gpt-4o": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/gpt-4o.jsonl",
+        "cache_sha256": "42106fd0d05b6521b58d47f6d0c0cc126b7b621b6896daa55c84b30585fc9a01",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "openai_chat",
+        "requested_model": "gpt-4o-2024-11-20",
+        "response_models": [
+          "gpt-4o-2024-11-20"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "gpt-5-mini": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/gpt-5-mini.jsonl",
+        "cache_sha256": "54d044cd2b599c2402ab27b40b40b06e25641b4d29f362f846793b71f15234c3",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "openai_responses",
+        "requested_model": "gpt-5-mini-2025-08-07",
+        "response_models": [
+          "gpt-5-mini-2025-08-07"
+        ],
+        "checkpoints": [],
+        "temperature": 0.7
+      },
+      "llama-3.3-70B-instruct-turbo": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/llama-3.3-70b-instruct-turbo.jsonl",
+        "cache_sha256": "bc9f741cfc7792c29557382471f8df2d1e5c323108957ea2b0b9a45024d6c89c",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "local_vllm",
+        "requested_model": "meta-llama/Llama-3.1-8B-Instruct",
+        "response_models": [
+          "meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "checkpoints": [
+          "/data2/.huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/a2856192dd7c25b842431f39c179a6c2c2f627d1"
+        ],
+        "checkpoint_repositories": [
+          "unsloth/Meta-Llama-3.1-8B-Instruct"
+        ],
+        "checkpoint_revisions": [
+          "a2856192dd7c25b842431f39c179a6c2c2f627d1"
+        ],
+        "compatibility_notes": [
+          "The field name is retained for schema compatibility; responses are generated by local Llama-3.1-8B-Instruct."
+        ],
+        "temperature": 0.7
+      },
+      "mistral-7B-instruct-v0.3": {
+        "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/mistral-7b-instruct-v0.3.jsonl",
+        "cache_sha256": "3d8fb8620a6bf7c17617e3fac2adfcfdba50d2fca66daa8440a2cff63748ba4b",
+        "record_count": 100,
+        "answer_count": 1000,
+        "sample_count_per_question": 50,
+        "provider": "local_vllm",
+        "requested_model": "mistralai/Mistral-7B-Instruct-v0.3",
+        "response_models": [
+          "mistralai/Mistral-7B-Instruct-v0.3"
+        ],
+        "checkpoints": [
+          "/data2/.huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71"
+        ],
+        "checkpoint_repositories": [
+          "mistralai/Mistral-7B-Instruct-v0.3"
+        ],
+        "checkpoint_revisions": [
+          "c170c708c41dac9275d15a8fff4eca08d52bab71"
+        ],
+        "compatibility_notes": [
+          "The field name and local checkpoint identify the same Mistral-7B-Instruct-v0.3 model."
+        ],
+        "temperature": 0.7
+      }
+    },
+    "legacy_vector_resampling": {
+      "mistral-7B-instruct-v0.3": {
+        "QID233_1": {
+          "reason": "The transferred legacy vector contained 49 responses. The full question was resampled for all 50 fixed personas with the exact local source model instead of fabricating one missing value.",
+          "original_raw_length": 49,
+          "original_normalized_length": 49,
+          "replacement_raw_length": 50,
+          "replacement_normalized_length": 50,
+          "replacement_policy": "complete_question_resample",
+          "cache": {
+            "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/llm_generation/legacy_resample_qid233_1/mistral-7b-instruct-v0.3.jsonl",
+            "cache_sha256": "54a355481a4d138164494ebacd5c88e3a9b9623f4a6d28dfab330f5a041f13c2",
+            "record_count": 50,
+            "answer_count": 50,
+            "sample_count_per_question": 50,
+            "provider": "local_vllm",
+            "requested_model": "mistralai/Mistral-7B-Instruct-v0.3",
+            "response_models": [
+              "mistralai/Mistral-7B-Instruct-v0.3"
+            ],
+            "checkpoints": [
+              "/data2/.huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71"
+            ],
+            "checkpoint_repositories": [
+              "mistralai/Mistral-7B-Instruct-v0.3"
+            ],
+            "checkpoint_revisions": [
+              "c170c708c41dac9275d15a8fff4eca08d52bab71"
+            ],
+            "compatibility_notes": [
+              "The field name and local checkpoint identify the same Mistral-7B-Instruct-v0.3 model."
+            ],
+            "temperature": 0.7
+          }
+        }
+      }
+    }
+  },
+  "embedding": {
+    "provider": "OpenAI",
+    "model": "text-embedding-3-small",
+    "dimensions": 256,
+    "input_field": "Question"
+  },
+  "one_logprobs": {
+    "coverage": 279,
+    "vector_width": 11,
+    "generation": {
+      "schema_version": 2,
+      "generated_questions": 20,
+      "preserved_legacy_questions": 259,
+      "provider": "OpenAI Chat Completions API",
+      "requested_model": "gpt-4o-2024-11-20",
+      "response_models": [
+        "gpt-4o-2024-11-20"
+      ],
+      "temperature": 1.0,
+      "max_completion_tokens": 1,
+      "top_logprobs_requested": 20,
+      "generation_method_counts": {
+        "direct_unbiased_top20": 16,
+        "top20_censored_zero_with_error_bound": 4
+      },
+      "top20_censoring": {
+        "policy": "If a legal choice is absent from the 20 returned candidates, assign it zero in the truncated vector and renormalize the visible legal choices. Store a per-question upper bound based on the twentieth candidate's logprob.",
+        "reason": "The API does not expose the exact logprob of a token outside the returned top 20; forced output tokens use the -9999 sentinel."
+      },
+      "prompt": {
+        "system": "You answer survey questions by selecting exactly one numbered response option. Return only the option number, with no words or explanation.",
+        "user_template": "Question:\n{question}\n\nSelect exactly one option. Your entire response must be one integer from:\n{choices}\n\nAnswer:"
+      },
+      "probability_definition": "Use the initial unbiased first-token top-logprobs directly whenever all legal choices are visible. If a legal choice is top-20 censored, assign zero to that unobserved category, renormalize the visible legal choices, record a strict omitted-mass/error upper bound, and zero-pad the final vector to width 11.",
+      "estimated_unbiased_legal_mass": {
+        "minimum": 0.9999998598650998,
+        "median": 0.9999999252824876,
+        "maximum": 1.000000096075213
+      },
+      "cache_path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/one_logprobs_generation/gpt-4o-2024-11-20-adaptive.jsonl",
+      "cache_sha256": "3cff3b66a10a518eafaac1c1729c4d7957f80eb3fab603cc79f67942926aa679",
+      "record_count": 20,
+      "generated_utc": "2026-07-29T14:23:19.049458+00:00"
+    }
+  },
+  "source": {
+    "directory": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert",
+    "all": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/twin_all.parquet",
+      "sha256": "50a776c6064822a09ae3d6152b92819b209b85c17e2dc5f963685894a92ccc41"
+    },
+    "train": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/twin_train.parquet",
+      "sha256": "867ee57054a2e9731de36f6e8182281812f72b769ec445a4c5e8b4769d01235c"
+    },
+    "test": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/twin_test.parquet",
+      "sha256": "2bb4b55729a0d6eb2cb29f09edaf6e0470fe77d2f607a60e03a24e154b018bf4"
+    },
+    "metadata": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/filtered_new/strict_likert/metadata.json",
+      "sha256": "09047810ddc638e4f8a54ed46d0ce2248bac468a032054c5822673c485ab55bd",
+      "updated_utc": "2026-07-30T03:33:48.362383+00:00"
+    }
+  },
+  "output": {
+    "columns": [
+      "Variable_Name",
+      "Question",
+      "score_range",
+      "Average_Human_Response",
+      "Average_Human_Response_norm",
+      "Question_Embedding",
+      "claude-3.5-haiku",
+      "deepseek-v3",
+      "gpt-3.5-turbo",
+      "gpt-4o-mini",
+      "gpt-4o",
+      "gpt-5-mini",
+      "llama-3.3-70B-instruct-turbo",
+      "mistral-7B-instruct-v0.3",
+      "claude-3.5-haiku_norm",
+      "deepseek-v3_norm",
+      "gpt-3.5-turbo_norm",
+      "gpt-4o-mini_norm",
+      "gpt-4o_norm",
+      "gpt-5-mini_norm",
+      "llama-3.3-70B-instruct-turbo_norm",
+      "mistral-7B-instruct-v0.3_norm",
+      "one_logprobs",
+      "one_logprobs_expected_response",
+      "one_logprobs_expected_response_norm",
+      "one_logprobs_choice_count"
+    ],
+    "train": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/aggreated/twin_train.parquet",
+      "rows": 223,
+      "sha256": "06076086e6784406360de03a6354065d01e763edd13a7aec53a5836e292deea4"
+    },
+    "test": {
+      "path": "/data2/debias_response/dataset/Twin-2K-500/aggreated/twin_test.parquet",
+      "rows": 56,
+      "sha256": "ac22e8c34ed6a223502e0fecf51ab925c8ce324d8dbcb3c71122bc3830a75bcc"
+    }
+  },
+  "validation": {
+    "all_rows": 279,
+    "train_rows": 223,
+    "test_rows": 56,
+    "unique_questions": 279,
+    "train_test_overlap": 0,
+    "embedding_dimension": 256,
+    "llm_nonnull_coverage": {
+      "claude-3.5-haiku": 279,
+      "deepseek-v3": 279,
+      "gpt-3.5-turbo": 279,
+      "gpt-4o-mini": 279,
+      "gpt-4o": 279,
+      "gpt-5-mini": 279,
+      "llama-3.3-70B-instruct-turbo": 279,
+      "mistral-7B-instruct-v0.3": 279
+    },
+    "llm_valid_50_vector_coverage": {
+      "claude-3.5-haiku": 279,
+      "deepseek-v3": 279,
+      "gpt-3.5-turbo": 279,
+      "gpt-4o-mini": 279,
+      "gpt-4o": 279,
+      "gpt-5-mini": 279,
+      "llama-3.3-70B-instruct-turbo": 279,
+      "mistral-7B-instruct-v0.3": 279
+    },
+    "pending_question_ids_by_model": {},
+    "invalid_vector_lengths_by_model": {},
+    "complete_persona_vector_models": [
+      "claude-3.5-haiku",
+      "deepseek-v3",
+      "gpt-3.5-turbo",
+      "gpt-4o-mini",
+      "gpt-4o",
+      "gpt-5-mini",
+      "llama-3.3-70B-instruct-turbo",
+      "mistral-7B-instruct-v0.3"
+    ],
+    "pending_persona_vector_models": [],
+    "ready_for_eight_source_experiments": true,
+    "one_logprobs_questions": 279,
+    "one_logprobs_width": 11
+  },
+  "usage_status": "ready_for_complete_eight_source_experiments"
+}

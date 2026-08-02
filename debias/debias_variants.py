@@ -72,6 +72,7 @@ ONE_LOGPROB_VARIANT = "one_logprob"
 ONE_LOGPROB_FIELD = "one_logprobs"
 ONE_LOGPROB_BASELINE_FIELD = "one_logprobs_expected_response_norm"
 ONE_LOGPROB_CHOICE_COUNT_FIELD = "one_logprobs_choice_count"
+VALID_MLP_HEADS = ("mse", "gaussian", "beta")
 
 
 def load_data(file_path):
@@ -790,8 +791,13 @@ def prepare_features(
 class PyTorchMLP(nn.Module):
     """PyTorch MLP with GPU support"""
 
-    def __init__(self, input_dim, hidden_layers, dropout=0.0):
+    def __init__(self, input_dim, hidden_layers, dropout=0.0, prediction_head="mse"):
         super().__init__()
+        if prediction_head not in VALID_MLP_HEADS:
+            raise ValueError(
+                f"Unsupported MLP prediction head {prediction_head!r}; "
+                f"choose from {VALID_MLP_HEADS}"
+            )
         layers = []
         prev_dim = input_dim
 
@@ -802,13 +808,13 @@ class PyTorchMLP(nn.Module):
                 layers.append(nn.Dropout(dropout))
             prev_dim = hidden_dim
 
-        # Output layer (single regression output)
-        layers.append(nn.Linear(prev_dim, 1))
+        output_dim = 1 if prediction_head == "mse" else 2
+        layers.append(nn.Linear(prev_dim, output_dim))
 
         self.network = nn.Sequential(*layers)
 
     def forward(self, x):
-        return self.network(x).squeeze()
+        return self.network(x)
 
 
 class PyTorchMLPRegressor:
@@ -820,7 +826,13 @@ class PyTorchMLPRegressor:
                  validation_fraction=0.1, min_delta=1e-6,
                  dropout=0.0, standardize=True,
                  lr_patience=10, lr_factor=0.5, min_lr=1e-6,
-                 device='cuda', random_state=42, verbose=False):
+                 device='cuda', random_state=42, verbose=False,
+                 prediction_head="mse"):
+        if prediction_head not in VALID_MLP_HEADS:
+            raise ValueError(
+                f"Unsupported MLP prediction head {prediction_head!r}; "
+                f"choose from {VALID_MLP_HEADS}"
+            )
         self.hidden_layers = hidden_layers
         self.learning_rate = learning_rate
         self.alpha = alpha
@@ -837,6 +849,7 @@ class PyTorchMLPRegressor:
         self.min_lr = min_lr
         self.random_state = random_state
         self.verbose = verbose
+        self.prediction_head = prediction_head
 
         # Set device - supports 'cuda', 'cuda:0', 'cuda:1', 'cpu'
         if device == 'cuda' and TORCH_AVAILABLE and torch.cuda.is_available():
@@ -871,8 +884,53 @@ class PyTorchMLPRegressor:
 
     def _create_model(self, input_dim):
         self.input_dim = input_dim
-        model = PyTorchMLP(input_dim, self.hidden_layers, dropout=self.dropout)
+        model = PyTorchMLP(
+            input_dim,
+            self.hidden_layers,
+            dropout=self.dropout,
+            prediction_head=self.prediction_head,
+        )
         return model.to(self.device)
+
+    def _loss(self, raw_output, target):
+        if self.prediction_head == "mse":
+            return nn.functional.mse_loss(raw_output.squeeze(-1), target)
+
+        if self.prediction_head == "gaussian":
+            mean = raw_output[:, 0]
+            variance = (
+                nn.functional.softplus(raw_output[:, 1]) + 1e-4
+            ).clamp(max=1e4)
+            return 0.5 * (
+                torch.log(variance) + torch.square(target - mean) / variance
+            ).mean()
+
+        alpha = (
+            nn.functional.softplus(raw_output[:, 0]) + 1e-4
+        ).clamp(max=1e4)
+        beta = (
+            nn.functional.softplus(raw_output[:, 1]) + 1e-4
+        ).clamp(max=1e4)
+        stable_target = target.clamp(1e-4, 1.0 - 1e-4)
+        log_beta = torch.lgamma(alpha) + torch.lgamma(beta) - torch.lgamma(
+            alpha + beta
+        )
+        log_prob = (
+            (alpha - 1.0) * torch.log(stable_target)
+            + (beta - 1.0) * torch.log1p(-stable_target)
+            - log_beta
+        )
+        return -log_prob.mean()
+
+    def _point_prediction(self, raw_output):
+        if self.prediction_head == "mse":
+            return raw_output.squeeze(-1)
+        if self.prediction_head == "gaussian":
+            return raw_output[:, 0]
+
+        alpha = nn.functional.softplus(raw_output[:, 0]) + 1e-4
+        beta = nn.functional.softplus(raw_output[:, 1]) + 1e-4
+        return alpha / (alpha + beta)
 
     def fit(self, X, y):
         # Set random seed
@@ -882,6 +940,12 @@ class PyTorchMLPRegressor:
 
         X = np.asarray(X, dtype=np.float32)
         y = np.asarray(y, dtype=np.float32)
+        if self.prediction_head == "beta" and (
+            not np.all(np.isfinite(y)) or np.any(y < 0.0) or np.any(y > 1.0)
+        ):
+            raise ValueError(
+                "The beta MLP head requires finite targets in the [0, 1] interval"
+            )
 
         if self.standardize:
             self.feature_mean = X.mean(axis=0)
@@ -920,8 +984,6 @@ class PyTorchMLPRegressor:
         # Create model
         self.model = self._create_model(X_proc.shape[1])
 
-        # Loss and optimizer
-        criterion = nn.MSELoss()
         # Add L2 regularization through weight_decay
         optimizer = optim.Adam(self.model.parameters(),
                               lr=self.learning_rate,
@@ -949,8 +1011,12 @@ class PyTorchMLPRegressor:
 
             for batch_X, batch_y in dataloader:
                 optimizer.zero_grad()
-                predictions = self.model(batch_X)
-                loss = criterion(predictions, batch_y)
+                raw_output = self.model(batch_X)
+                loss = self._loss(raw_output, batch_y)
+                if not torch.isfinite(loss):
+                    raise RuntimeError(
+                        f"Non-finite {self.prediction_head} training loss"
+                    )
                 loss.backward()
                 optimizer.step()
                 epoch_loss += loss.item()
@@ -961,8 +1027,12 @@ class PyTorchMLPRegressor:
             if use_validation:
                 self.model.eval()
                 with torch.no_grad():
-                    val_predictions = self.model(X_val_tensor)
-                    val_loss = criterion(val_predictions, y_val_tensor).item()
+                    val_output = self.model(X_val_tensor)
+                    val_loss = self._loss(val_output, y_val_tensor).item()
+                if not math.isfinite(val_loss):
+                    raise RuntimeError(
+                        f"Non-finite {self.prediction_head} validation loss"
+                    )
                 monitor_loss = val_loss
             else:
                 val_loss = None
@@ -1013,9 +1083,10 @@ class PyTorchMLPRegressor:
                 X_tensor = torch.as_tensor(
                     X[start:end], dtype=torch.float32, device=self.device
                 )
-                preds = self.model(X_tensor)
+                raw_output = self.model(X_tensor)
+                preds = self._point_prediction(raw_output)
                 outs.append(preds.detach().cpu())
-                del X_tensor, preds
+                del X_tensor, raw_output, preds
         return torch.cat(outs, dim=0).numpy()
 
 
@@ -1059,6 +1130,12 @@ class VariantDebiasModel:
                 hidden_layer_sizes = tuple(map(int, hidden_layers.split(',')))
             else:
                 hidden_layer_sizes = hidden_layers
+            prediction_head = self.kwargs.get("mlp_head", "mse")
+            if prediction_head not in VALID_MLP_HEADS:
+                raise ValueError(
+                    f"Unsupported MLP prediction head {prediction_head!r}; "
+                    f"choose from {VALID_MLP_HEADS}"
+                )
 
             # Use PyTorch MLP only when the requested CUDA device is actually available.
             # On some macOS CPU environments, PyTorch MLP may fail when it silently falls
@@ -1077,8 +1154,19 @@ class VariantDebiasModel:
                     except (IndexError, ValueError):
                         cuda_available_for_request = False
 
-            use_torch_mlp = cuda_requested and cuda_available_for_request
+            use_torch_mlp = (
+                cuda_requested and cuda_available_for_request
+            ) or prediction_head != "mse"
             if use_torch_mlp:
+                if not TORCH_AVAILABLE:
+                    raise ImportError(
+                        f"The {prediction_head} MLP head requires PyTorch"
+                    )
+                resolved_device = (
+                    self.device
+                    if cuda_requested and cuda_available_for_request
+                    else "cpu"
+                )
                 # Always enable verbose for PyTorch MLP to show device info
                 return PyTorchMLPRegressor(
                     hidden_layers=hidden_layer_sizes,
@@ -1091,9 +1179,10 @@ class VariantDebiasModel:
                     min_delta=self.kwargs.get('min_delta', 1e-6),
                     dropout=self.kwargs.get('mlp_dropout', 0.0),
                     standardize=self.kwargs.get('mlp_standardize', True),
-                    device=self.device,
+                    device=resolved_device,
                     random_state=self.random_state,
-                    verbose=True  # Always show device info
+                    verbose=True,  # Always show device info
+                    prediction_head=prediction_head,
                 )
             else:
                 if cuda_requested and not cuda_available_for_request:
@@ -1449,6 +1538,11 @@ def run_variant_experiment(
         llm_input_name=llm_input_name,
         llm_responses_length=output_llm_responses_length,
         llm_vector_transform=llm_vector_transform,
+        prediction_head=(
+            model_kwargs.get("mlp_head", "mse")
+            if model_type == "mlp"
+            else None
+        ),
         result_file_name=result_file_name,
         save_split_results=save_split_results,
         result_precision=result_precision,
@@ -1646,6 +1740,16 @@ if __name__ == "__main__":
         help="MLP dropout rate for PyTorch MLP (default: 0.0)"
     )
     parser.add_argument(
+        "--mlp_head",
+        choices=VALID_MLP_HEADS,
+        default="mse",
+        help=(
+            "MLP prediction head and training objective. "
+            "mse uses a scalar output, gaussian uses Gaussian NLL, and "
+            "beta uses Beta NLL (default: mse)."
+        ),
+    )
+    parser.add_argument(
         "--validation_fraction",
         type=float,
         default=0.1,
@@ -1810,6 +1914,7 @@ if __name__ == "__main__":
             max_iter=args.max_iter,
             batch_size=args.batch_size,
             mlp_dropout=args.mlp_dropout,
+            mlp_head=args.mlp_head,
             validation_fraction=args.validation_fraction,
             n_iter_no_change=args.n_iter_no_change,
             min_delta=args.min_delta,
@@ -1846,6 +1951,7 @@ if __name__ == "__main__":
             max_iter=args.max_iter,
             batch_size=args.batch_size,
             mlp_dropout=args.mlp_dropout,
+            mlp_head=args.mlp_head,
             validation_fraction=args.validation_fraction,
             n_iter_no_change=args.n_iter_no_change,
             min_delta=args.min_delta,

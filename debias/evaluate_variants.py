@@ -557,6 +557,7 @@ def save_single_result_to_csv(
     llm_input_name=None,
     llm_responses_length=None,
     llm_vector_transform=None,
+    prediction_head=None,
     result_file_name=None,
     save_split_results=True,
     result_precision=4,
@@ -584,6 +585,7 @@ def save_single_result_to_csv(
         llm_input_name: LLM输入构造名称标签（可选）
         llm_responses_length: LLM responses维度（主要用于x_all_llm，可选）
         llm_vector_transform: 向量化LLM输入的规范化方式（可选）
+        prediction_head: MLP prediction head and training objective（可选）
         result_file_name: 指定输出文件名（可选，写入results目录）
         save_split_results: 是否额外写入 results/train 和 results/test
         result_precision: CSV 中浮点指标保留的小数位数
@@ -684,6 +686,7 @@ def save_single_result_to_csv(
         "llm_input_name": llm_input_name,
         "llm_responses_length": llm_responses_length,
         "llm_vector_transform": llm_vector_transform,
+        "prediction_head": prediction_head,
         "llm_field": llm_field,
         "llm_fields": "|".join(llm_fields) if llm_fields else None,
     }
