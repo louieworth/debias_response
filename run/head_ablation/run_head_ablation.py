@@ -14,8 +14,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RESULT_ROOT = PROJECT_ROOT / "results" / "head_ablation" / "raw"
-LOG_ROOT = PROJECT_ROOT / "logs" / "head_ablation"
+DEFAULT_NAMESPACE = "head_ablation_individual_config133_seed0_4"
 
 DATASETS = {
     "Twin-2K-500": {
@@ -82,17 +81,19 @@ LEVEL_CONFIG = {
         "max_iter": "1500",
         "batch_size": "64",
         "dropout": "0.0",
+        "validation_fraction": "0.1",
         "patience": "20",
     },
     "individual": {
-        "seeds": range(1, 6),
+        "seeds": range(0, 5),
         "hidden_layers": "6144,3072,1536,768,384",
-        "mlp_alpha": "0.0001",
+        "mlp_alpha": "0.000001",
         "learning_rate": "0.0002",
         "max_iter": "3500",
         "batch_size": "512",
-        "dropout": "0.05",
-        "patience": "60",
+        "dropout": "0.08",
+        "validation_fraction": "0",
+        "patience": "30",
     },
 }
 
@@ -103,11 +104,12 @@ class Task:
     dataset: str
     method: str
     seed: int
+    namespace: str = DEFAULT_NAMESPACE
 
     @property
     def relative_result(self) -> Path:
         return (
-            Path("head_ablation")
+            Path(self.namespace)
             / "raw"
             / self.level
             / self.dataset
@@ -122,7 +124,9 @@ class Task:
     @property
     def log_path(self) -> Path:
         return (
-            LOG_ROOT
+            PROJECT_ROOT
+            / "logs"
+            / self.namespace
             / self.level
             / self.dataset
             / self.method
@@ -136,6 +140,11 @@ class Task:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--namespace",
+        default=DEFAULT_NAMESPACE,
+        help="Isolated directory name under results/ and logs/.",
+    )
     parser.add_argument(
         "--levels",
         nargs="+",
@@ -240,7 +249,7 @@ def build_command(task: Task, device: str) -> list[str]:
         "--mlp_dropout",
         config["dropout"],
         "--validation_fraction",
-        "0.1",
+        config["validation_fraction"],
         "--n_iter_no_change",
         config["patience"],
         "--min_delta",
@@ -291,7 +300,7 @@ def main() -> int:
         raise SystemExit("--max-workers must be between 1 and the number of GPUs")
 
     tasks = [
-        Task(level, dataset, method, seed)
+        Task(level, dataset, method, seed, args.namespace)
         for level in args.levels
         for dataset in args.datasets
         for method in args.methods

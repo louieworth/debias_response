@@ -42,6 +42,7 @@ INCLUDE_SAMPLE="${INCLUDE_SAMPLE:-y}"
 INCLUDE_CONCAT="${INCLUDE_CONCAT:-y}"
 INCLUDE_ONE_LOGPROB="${INCLUDE_ONE_LOGPROB:-n}"
 ONE_LOGPROB_RESULT_PRECISION="${ONE_LOGPROB_RESULT_PRECISION:-17}"
+RESULT_PRECISION="${RESULT_PRECISION:-}"
 
 # Multi-source settings
 SAMPLE_PER_LLM="${SAMPLE_PER_LLM:-10}"
@@ -298,7 +299,9 @@ run_experiment() {
     if [[ ! "$SAVE_SPLIT_RESULTS" =~ ^[Yy]$ ]]; then
         cmd+=(--no_split_results)
     fi
-    if [[ "$variant" == "one_logprob" ]]; then
+    if [[ -n "$RESULT_PRECISION" ]]; then
+        cmd+=(--result_precision "$RESULT_PRECISION")
+    elif [[ "$variant" == "one_logprob" ]]; then
         cmd+=(--result_precision "$ONE_LOGPROB_RESULT_PRECISION")
     fi
     case "$model_type" in

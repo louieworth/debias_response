@@ -1,0 +1,173 @@
+{
+  "k": 50,
+  "selection": "retain the first K coordinates for every model field",
+  "canonical_source": "gpt-4o",
+  "aggregate_scalars": "Average_LLM_Response and Average_LLM_Response_norm are recomputed from the retained canonical-source coordinates",
+  "files": [
+    {
+      "path": "dataset/OpinionQA/aggreated/opinionqa_flat.json",
+      "rows": 385,
+      "source_length_counts": {
+        "claude-3.5-haiku": {
+          "150": 385
+        },
+        "deepseek-v3": {
+          "150": 385
+        },
+        "gpt-3.5-turbo": {
+          "150": 385
+        },
+        "gpt-4o-mini": {
+          "100": 385
+        },
+        "gpt-4o": {
+          "200": 385
+        },
+        "gpt-5-mini": {
+          "150": 385
+        },
+        "llama-3.3-70B-instruct-turbo": {
+          "150": 385
+        },
+        "mistral-7B-instruct-v0.3": {
+          "100": 385
+        },
+        "claude-3.5-haiku_norm": {
+          "150": 385
+        },
+        "deepseek-v3_norm": {
+          "150": 385
+        },
+        "gpt-3.5-turbo_norm": {
+          "150": 385
+        },
+        "gpt-4o-mini_norm": {
+          "100": 385
+        },
+        "gpt-4o_norm": {
+          "200": 385
+        },
+        "gpt-5-mini_norm": {
+          "150": 385
+        },
+        "llama-3.3-70B-instruct-turbo_norm": {
+          "150": 385
+        },
+        "mistral-7B-instruct-v0.3_norm": {
+          "100": 385
+        }
+      },
+      "sha256": "b090185238e394d5597ab84defc6eea62ea592703f5b33a9a6caeb929ba0409d"
+    },
+    {
+      "path": "dataset/OpinionQA/aggreated/opinionqa_train.parquet",
+      "rows": 308,
+      "source_length_counts": {
+        "claude-3.5-haiku": {
+          "150": 308
+        },
+        "deepseek-v3": {
+          "150": 308
+        },
+        "gpt-3.5-turbo": {
+          "150": 308
+        },
+        "gpt-4o-mini": {
+          "100": 308
+        },
+        "gpt-4o": {
+          "200": 308
+        },
+        "gpt-5-mini": {
+          "150": 308
+        },
+        "llama-3.3-70B-instruct-turbo": {
+          "150": 308
+        },
+        "mistral-7B-instruct-v0.3": {
+          "100": 308
+        },
+        "claude-3.5-haiku_norm": {
+          "150": 308
+        },
+        "deepseek-v3_norm": {
+          "150": 308
+        },
+        "gpt-3.5-turbo_norm": {
+          "150": 308
+        },
+        "gpt-4o-mini_norm": {
+          "100": 308
+        },
+        "gpt-4o_norm": {
+          "200": 308
+        },
+        "gpt-5-mini_norm": {
+          "150": 308
+        },
+        "llama-3.3-70B-instruct-turbo_norm": {
+          "150": 308
+        },
+        "mistral-7B-instruct-v0.3_norm": {
+          "100": 308
+        }
+      },
+      "sha256": "945f46d71cd0b0ffc394c07bc82803740b044304236dd1a123ee27ac09111c59"
+    },
+    {
+      "path": "dataset/OpinionQA/aggreated/opinionqa_test.parquet",
+      "rows": 77,
+      "source_length_counts": {
+        "claude-3.5-haiku": {
+          "150": 77
+        },
+        "deepseek-v3": {
+          "150": 77
+        },
+        "gpt-3.5-turbo": {
+          "150": 77
+        },
+        "gpt-4o-mini": {
+          "100": 77
+        },
+        "gpt-4o": {
+          "200": 77
+        },
+        "gpt-5-mini": {
+          "150": 77
+        },
+        "llama-3.3-70B-instruct-turbo": {
+          "150": 77
+        },
+        "mistral-7B-instruct-v0.3": {
+          "100": 77
+        },
+        "claude-3.5-haiku_norm": {
+          "150": 77
+        },
+        "deepseek-v3_norm": {
+          "150": 77
+        },
+        "gpt-3.5-turbo_norm": {
+          "150": 77
+        },
+        "gpt-4o-mini_norm": {
+          "100": 77
+        },
+        "gpt-4o_norm": {
+          "200": 77
+        },
+        "gpt-5-mini_norm": {
+          "150": 77
+        },
+        "llama-3.3-70B-instruct-turbo_norm": {
+          "150": 77
+        },
+        "mistral-7B-instruct-v0.3_norm": {
+          "100": 77
+        }
+      },
+      "sha256": "082a9bb504177397e4c9ca8a1d3503bbe04b1ca73f963d1ea51f1de75dc6f907"
+    }
+  ]
+}

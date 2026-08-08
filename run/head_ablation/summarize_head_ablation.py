@@ -8,7 +8,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from run_head_ablation import DATASETS, LEVEL_CONFIG, METHODS, PROJECT_ROOT, Task
+from run_head_ablation import (
+    DATASETS,
+    DEFAULT_NAMESPACE,
+    LEVEL_CONFIG,
+    METHODS,
+    PROJECT_ROOT,
+    Task,
+)
 
 
 METRICS = {
@@ -21,18 +28,40 @@ METRICS = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--namespace",
+        default=DEFAULT_NAMESPACE,
+        help="Directory name under results/ used by the runner.",
+    )
+    parser.add_argument(
+        "--levels",
+        nargs="+",
+        choices=sorted(LEVEL_CONFIG),
+        default=list(LEVEL_CONFIG),
+    )
+    parser.add_argument(
+        "--methods",
+        nargs="+",
+        choices=list(METHODS),
+        default=list(METHODS),
+    )
     parser.add_argument("--allow-partial", action="store_true")
     return parser.parse_args()
 
 
-def load_rows(allow_partial: bool) -> pd.DataFrame:
+def load_rows(
+    allow_partial: bool,
+    namespace: str,
+    levels: list[str],
+    methods: list[str],
+) -> pd.DataFrame:
     rows = []
     missing = []
-    for level in LEVEL_CONFIG:
+    for level in levels:
         for dataset in DATASETS:
-            for method in METHODS:
+            for method in methods:
                 for seed in LEVEL_CONFIG[level]["seeds"]:
-                    task = Task(level, dataset, method, seed)
+                    task = Task(level, dataset, method, seed, namespace)
                     if not task.result_path.exists():
                         missing.append(str(task.result_path))
                         continue
@@ -79,7 +108,12 @@ def load_rows(allow_partial: bool) -> pd.DataFrame:
 
 def main() -> int:
     args = parse_args()
-    raw = load_rows(args.allow_partial)
+    raw = load_rows(
+        args.allow_partial,
+        args.namespace,
+        args.levels,
+        args.methods,
+    )
     if raw.empty:
         raise SystemExit("No result rows found")
 
@@ -102,7 +136,7 @@ def main() -> int:
         for column in summary.columns
     ]
 
-    output_root = PROJECT_ROOT / "results" / "head_ablation"
+    output_root = PROJECT_ROOT / "results" / args.namespace
     output_root.mkdir(parents=True, exist_ok=True)
     raw.to_csv(output_root / "seed_metrics.csv", index=False)
     summary.to_csv(output_root / "summary.csv", index=False)

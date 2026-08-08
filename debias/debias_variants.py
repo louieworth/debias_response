@@ -594,8 +594,9 @@ def prepare_features(
         llm_fields: Optional comma-separated or iterable list of LLM fields.
                     When specified, multi-source variants concatenate in the listed order.
         sample_per_llm: Responses sampled per field when using sample_per_field
-        llm_dim: Target LLM response dimension for x_all_llm.
-                 If provided, each sample is truncated/padded to this length.
+        llm_dim: Target LLM response budget for x_all_llm and x_avg_llm.
+                 If provided, each sample is truncated/padded to this length
+                 before either retaining the vector or taking its mean.
         llm_sampling_strategy: "all" or "sample_per_field"
         random_state: Random seed used by per-field sampling
         llm_vector_transform: How to canonicalize vector-valued LLM inputs.
@@ -652,17 +653,21 @@ def prepare_features(
             # Use average LLM response (normalized)
             avg_llm = item.get('Average_LLM_Response_norm')
             if not is_individual and use_processed_custom_llm:
-                raw_llm_responses = _build_processed_llm_responses(
+                raw_blocks = _build_processed_llm_response_blocks(
                     item,
                     llm_field=llm_field,
                     llm_fields=normalized_llm_fields,
                     llm_sampling_strategy=llm_sampling_strategy,
                     sample_per_llm=sample_per_llm,
                     random_state=random_state,
+                )
+                budgeted_llm_responses = _build_llm_vector_from_blocks(
+                    raw_blocks,
+                    llm_dim=llm_dim,
                     llm_vector_transform="raw",
                 )
-                if len(raw_llm_responses) > 0:
-                    avg_llm = float(np.mean(raw_llm_responses))
+                if len(budgeted_llm_responses) > 0:
+                    avg_llm = float(np.mean(budgeted_llm_responses))
             if is_individual:
                 # Individual format: use Average_LLM_Response_norm
                 avg_llm = item.get('Average_LLM_Response_norm', 0)
@@ -681,7 +686,11 @@ def prepare_features(
                 sample_per_llm=sample_per_llm,
                 random_state=random_state,
             )
-            raw_llm_responses = [value for block in raw_blocks for value in block]
+            budgeted_raw_llm_responses = _build_llm_vector_from_blocks(
+                raw_blocks,
+                llm_dim=llm_dim,
+                llm_vector_transform="raw",
+            )
             llm_responses = _build_llm_vector_from_blocks(
                 raw_blocks,
                 llm_dim=llm_dim,
@@ -693,7 +702,11 @@ def prepare_features(
 
             llm_array = np.array(llm_responses, dtype=float)
             features = np.concatenate([features, llm_array])
-            baseline_value = float(np.mean(raw_llm_responses)) if len(raw_llm_responses) > 0 else float(np.mean(llm_array))
+            baseline_value = (
+                float(np.mean(budgeted_raw_llm_responses))
+                if len(budgeted_raw_llm_responses) > 0
+                else float(np.mean(llm_array))
+            )
 
         elif variant == 'x_one_llm':
             # Use only first LLM response
@@ -1271,6 +1284,7 @@ def run_variant_experiment(
     llm_vector_transform="raw",
     llm_dim=None,
     result_file_name=None,
+    prediction_file_name=None,
     save_split_results=True,
     result_precision=4,
     **model_kwargs
@@ -1293,9 +1307,11 @@ def run_variant_experiment(
         sample_per_llm: Responses sampled per field when using sample_per_field
         llm_sampling_strategy: "all" or "sample_per_field"
         llm_vector_transform: Canonicalization for vector-valued LLM inputs
-        llm_dim: Optional LLM response dimension for x_all_llm ablation.
-                 If None, uses max available length across train+test.
+        llm_dim: Optional response budget shared by x_all_llm and x_avg_llm.
+                 The budget is applied before retaining the vector or taking
+                 its mean. For x_all_llm, None uses the max available length.
         result_file_name: Optional result filename under results/
+        prediction_file_name: Optional per-unit test prediction CSV under results/
         save_split_results: Whether to also save results/train and results/test CSV rows
         result_precision: Number of decimal places retained in result CSV files
         **model_kwargs: Model parameters
@@ -1367,7 +1383,7 @@ def run_variant_experiment(
         print(f"  Note: --llm_dim is only used by x_all_llm / x_avg_llm, ignored for variant={variant}.")
     effective_llm_dim = llm_dim
     output_llm_responses_length = None
-    if variant == 'x_all_llm':
+    if variant == 'x_all_llm' or (variant == 'x_avg_llm' and llm_dim is not None):
         max_llm_len = get_max_llm_response_length(
             train_data + test_data,
             llm_field=llm_field,
@@ -1378,7 +1394,8 @@ def run_variant_experiment(
         )
         if max_llm_len <= 0:
             raise ValueError(
-                "x_all_llm requires non-empty LLM responses, but max available length is 0."
+                f"{variant} with an explicit LLM budget requires non-empty "
+                "LLM responses, but max available length is 0."
             )
         if llm_dim is None:
             effective_llm_dim = max_llm_len
@@ -1391,7 +1408,10 @@ def run_variant_experiment(
                     f"({max_llm_len})."
                 )
         output_llm_responses_length = int(effective_llm_dim)
-        print(f"  LLM dim for x_all_llm: {effective_llm_dim} (max available: {max_llm_len})")
+        print(
+            f"  LLM budget for {variant}: {effective_llm_dim} "
+            f"(max available: {max_llm_len})"
+        )
     elif variant == ONE_LOGPROB_VARIANT:
         vector_lengths = {
             len(_to_llm_response_list(item.get(llm_field)))
@@ -1473,6 +1493,32 @@ def run_variant_experiment(
         baseline_train[i] * (ranges_train[i][1] - ranges_train[i][0]) + ranges_train[i][0]
         for i in range(len(baseline_train))
     ])
+
+    if prediction_file_name:
+        prediction_relative_path = Path(prediction_file_name)
+        if prediction_relative_path.is_absolute() or ".." in prediction_relative_path.parts:
+            raise ValueError("prediction_file_name must be relative to the results/ directory.")
+        if len(test_data) != len(orig_test):
+            raise ValueError(
+                "Cannot align per-unit predictions with test rows: "
+                f"loaded {len(test_data)} rows but predicted {len(orig_test)} rows."
+            )
+        prediction_path = Path("results") / prediction_relative_path
+        prediction_path.parent.mkdir(parents=True, exist_ok=True)
+        prediction_frame = pd.DataFrame({
+            "unit_index": np.arange(len(orig_test), dtype=int),
+            "question_id": [item.get("Variable_Name") for item in test_data],
+            "respondent_id": [item.get("twin_id") for item in test_data],
+            "seed": int(random_state),
+            "variant": variant,
+            "y_true": np.asarray(orig_test, dtype=float),
+            "y_pred": np.asarray(y_pred_test_original, dtype=float),
+            "y_baseline": np.asarray(baseline_test_original, dtype=float),
+            "score_min": np.asarray([bounds[0] for bounds in ranges_test], dtype=float),
+            "score_max": np.asarray([bounds[1] for bounds in ranges_test], dtype=float),
+        })
+        prediction_frame.to_csv(prediction_path, index=False, float_format="%.17g")
+        print(f"Saved {len(prediction_frame)} per-unit predictions to {prediction_path}")
 
     # Compute metrics (normalized space without improvement)
     train_metrics_norm = compute_metrics(y_train, y_pred_train_norm, baseline_train, compute_improvement=False)
@@ -1836,9 +1882,10 @@ if __name__ == "__main__":
         type=int,
         default=None,
         help=(
-            "Optional LLM response dimension for x_all_llm ablation. "
-            "Default: use max available length across train+test. "
-            "If set greater than max length, raises an error."
+            "Optional LLM response budget for x_all_llm and x_avg_llm. "
+            "Responses are truncated/padded to this length before retaining "
+            "the vector or computing its mean. If set greater than the max "
+            "available length, raises an error."
         )
     )
     parser.add_argument(
@@ -1864,6 +1911,12 @@ if __name__ == "__main__":
         )
     )
     parser.add_argument(
+        "--prediction_file",
+        type=str,
+        default=None,
+        help="Optional per-unit test prediction CSV path under results/.",
+    )
+    parser.add_argument(
         "--no_split_results",
         action="store_true",
         help="Only write the combined results CSV under results/, skipping results/train and results/test."
@@ -1885,6 +1938,8 @@ if __name__ == "__main__":
         raise ValueError("Use either --llm_field or --llm_fields, not both.")
 
     if args.variant == 'all':
+        if args.prediction_file:
+            raise ValueError("--prediction_file requires one explicit --variant, not --variant all.")
         run_all_variants(
             args.train_file,
             args.test_file,
@@ -1937,6 +1992,7 @@ if __name__ == "__main__":
             llm_vector_transform=args.llm_vector_transform,
             llm_dim=args.llm_dim,
             result_file_name=args.result_file,
+            prediction_file_name=args.prediction_file,
             save_split_results=not args.no_split_results,
             result_precision=args.result_precision,
             alpha=args.alpha,

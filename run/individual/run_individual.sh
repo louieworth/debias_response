@@ -62,6 +62,8 @@ GPU_COUNT=${#GPUS[@]}
 RESULT_ROOT_REL="${RESULT_ROOT_REL:-$DEFAULT_RESULT_ROOT_REL}"
 LOG_DIR="${LOG_DIR:-$DEFAULT_LOG_DIR}"
 SAVE_SPLIT_RESULTS="${SAVE_SPLIT_RESULTS:-$DEFAULT_SAVE_SPLIT_RESULTS}"
+SAVE_UNIT_PREDICTIONS="${SAVE_UNIT_PREDICTIONS:-no}"
+UNIT_PREDICTION_ROOT_REL="${UNIT_PREDICTION_ROOT_REL:-${RESULT_ROOT_REL}_unit_predictions}"
 RESULT_PRECISION="${RESULT_PRECISION:-$DEFAULT_RESULT_PRECISION}"
 AUTO_CLEAR_OLD_RESULTS="${AUTO_CLEAR_OLD_RESULTS:-no}"
 SKIP_EXISTING_RESULTS="${SKIP_EXISTING_RESULTS:-yes}"
@@ -80,6 +82,7 @@ echo "Model:    mlp (layers=$MLP_HIDDEN_LAYERS, alpha=$MLP_ALPHA, lr=$MLP_LR_INI
 echo "          dropout=$MLP_DROPOUT, standardize=$MLP_STANDARDIZE, transform=$LLM_VECTOR_TRANSFORM)"
 echo "GPUs:     ${GPUS[*]} (round-robin)"
 echo "Result root: results/$RESULT_ROOT_REL"
+echo "Unit predictions: $SAVE_UNIT_PREDICTIONS (results/$UNIT_PREDICTION_ROOT_REL)"
 echo "Skip existing: $SKIP_EXISTING_RESULTS | Auto-clear: $AUTO_CLEAR_OLD_RESULTS"
 echo "========================================================================"
 
@@ -179,6 +182,12 @@ PY
             TMP_FILE_ABS="results/${TMP_FILE_REL}"
             rm -f "$TMP_FILE_ABS"  # ensure clean single-row output
             LOG_FILE="${LOG_DIR}/${DATASET_NAME}_individual_mlp_${variant}_seed${SEED}.log"
+            PREDICTION_ARGS=()
+            if [[ "${SAVE_UNIT_PREDICTIONS,,}" =~ ^(y|yes|1|true)$ ]]; then
+                UNIT_FILE_REL="${UNIT_PREDICTION_ROOT_REL}/${DATASET_NAME}/seed${SEED}_${variant}.csv"
+                mkdir -p "results/$(dirname "$UNIT_FILE_REL")"
+                PREDICTION_ARGS+=(--prediction_file "$UNIT_FILE_REL")
+            fi
 
             echo "  [launch $COMBO_IDX] seed=$SEED $variant on $ASSIGNED_GPU -> $LOG_FILE"
 
@@ -196,6 +205,7 @@ PY
                     --random_state "$SEED" \
                     --llm_vector_transform "$LLM_VECTOR_TRANSFORM" \
                     --result_file "$TMP_FILE_REL" \
+                    "${PREDICTION_ARGS[@]}" \
                     --hidden_layers "$MLP_HIDDEN_LAYERS" \
                     --mlp_alpha "$MLP_ALPHA" \
                     --learning_rate_init "$MLP_LR_INIT" \
