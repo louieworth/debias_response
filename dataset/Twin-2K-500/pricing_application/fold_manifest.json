@@ -1,0 +1,121 @@
+{
+  "description": "Five-fold whole-product holdout for Twin-2K-500 QID9 offers",
+  "fold_seed": 20260808,
+  "folds": [
+    {
+      "fold": 0,
+      "test_questions": [
+        "QID9_5",
+        "QID9_7",
+        "QID9_9",
+        "QID9_14",
+        "QID9_18",
+        "QID9_24",
+        "QID9_29",
+        "QID9_37"
+      ],
+      "train_rows": 8684,
+      "test_rows": 1336,
+      "train_question_count": 52,
+      "test_question_count": 8,
+      "train_respondent_count": 167,
+      "test_respondent_count": 167,
+      "train_file": "dataset/Twin-2K-500/pricing_application/fold0_train.parquet",
+      "test_file": "dataset/Twin-2K-500/pricing_application/fold0_test.parquet"
+    },
+    {
+      "fold": 1,
+      "test_questions": [
+        "QID9_4",
+        "QID9_16",
+        "QID9_23",
+        "QID9_30",
+        "QID9_33",
+        "QID9_36",
+        "QID9_38",
+        "QID9_39"
+      ],
+      "train_rows": 8684,
+      "test_rows": 1336,
+      "train_question_count": 52,
+      "test_question_count": 8,
+      "train_respondent_count": 167,
+      "test_respondent_count": 167,
+      "train_file": "dataset/Twin-2K-500/pricing_application/fold1_train.parquet",
+      "test_file": "dataset/Twin-2K-500/pricing_application/fold1_test.parquet"
+    },
+    {
+      "fold": 2,
+      "test_questions": [
+        "QID9_3",
+        "QID9_6",
+        "QID9_10",
+        "QID9_13",
+        "QID9_17",
+        "QID9_21",
+        "QID9_28",
+        "QID9_31"
+      ],
+      "train_rows": 8684,
+      "test_rows": 1336,
+      "train_question_count": 52,
+      "test_question_count": 8,
+      "train_respondent_count": 167,
+      "test_respondent_count": 167,
+      "train_file": "dataset/Twin-2K-500/pricing_application/fold2_train.parquet",
+      "test_file": "dataset/Twin-2K-500/pricing_application/fold2_test.parquet"
+    },
+    {
+      "fold": 3,
+      "test_questions": [
+        "QID9_2",
+        "QID9_8",
+        "QID9_11",
+        "QID9_12",
+        "QID9_20",
+        "QID9_26",
+        "QID9_27",
+        "QID9_34"
+      ],
+      "train_rows": 8684,
+      "test_rows": 1336,
+      "train_question_count": 52,
+      "test_question_count": 8,
+      "train_respondent_count": 167,
+      "test_respondent_count": 167,
+      "train_file": "dataset/Twin-2K-500/pricing_application/fold3_train.parquet",
+      "test_file": "dataset/Twin-2K-500/pricing_application/fold3_test.parquet"
+    },
+    {
+      "fold": 4,
+      "test_questions": [
+        "QID9_1",
+        "QID9_15",
+        "QID9_19",
+        "QID9_22",
+        "QID9_25",
+        "QID9_32",
+        "QID9_35",
+        "QID9_40"
+      ],
+      "train_rows": 8684,
+      "test_rows": 1336,
+      "train_question_count": 52,
+      "test_question_count": 8,
+      "train_respondent_count": 167,
+      "test_respondent_count": 167,
+      "train_file": "dataset/Twin-2K-500/pricing_application/fold4_train.parquet",
+      "test_file": "dataset/Twin-2K-500/pricing_application/fold4_test.parquet"
+    }
+  ],
+  "source_files": [
+    "dataset/Twin-2K-500/individual/individual_train.parquet",
+    "dataset/Twin-2K-500/individual/individual_test.parquet"
+  ],
+  "total_rows": 10020,
+  "respondents": 167,
+  "all_questions": 60,
+  "pricing_questions": 40,
+  "pricing_rows": 6680,
+  "estimand_scope": "Purchase incidence and gross revenue at each observed product-price offer; not price elasticity, WTP, a demand curve, or an optimal price."
+}
