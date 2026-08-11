@@ -25,12 +25,13 @@ PREDICTION_ROOT = (
     / "results/pricing_application/original_split/unit_predictions/Twin-2K-500"
 )
 OUTPUT_ROOT = PROJECT_ROOT / "results/pricing_application/original_split"
-VARIANTS = ("x_only", "x_one_llm", "x_avg_llm", "x_all_llm")
+VARIANTS = ("x_only", "x_one_llm", "one_logprob", "x_avg_llm", "x_all_llm")
 LABELS = {
     "base_llm": "Base LLM",
     "question_train_share_prior": "Question train-share prior",
     "x_only": "w/o LLM",
     "x_one_llm": "One",
+    "one_logprob": "One Logprob",
     "x_avg_llm": "Mean",
     "x_all_llm": "Vector",
 }
@@ -168,6 +169,28 @@ def paired_vector_tests(question_predictions: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def paired_seed_tests(seed_metrics: pd.DataFrame) -> pd.DataFrame:
+    one = seed_metrics[seed_metrics["variant"] == "x_one_llm"].set_index("seed")
+    rows = []
+    for variant in ("one_logprob", "x_avg_llm", "x_all_llm"):
+        method = seed_metrics[seed_metrics["variant"] == variant].set_index("seed")
+        method = method.loc[one.index]
+        for metric in ("revenue_mae", "revenue_wape_pct"):
+            test = ttest_rel(method[metric], one[metric])
+            rows.append(
+                {
+                    "comparison": f"{LABELS[variant]} vs One",
+                    "metric": metric,
+                    "seeds": len(one),
+                    "method_mean": method[metric].mean(),
+                    "one_mean": one[metric].mean(),
+                    "paired_t": test.statistic,
+                    "two_sided_p_value": test.pvalue,
+                }
+            )
+    return pd.DataFrame(rows)
+
+
 def summarize(seeds: tuple[int, ...]) -> pd.DataFrame:
     train = pd.read_parquet(TRAIN_PATH)
     test = pd.read_parquet(TEST_PATH)
@@ -246,6 +269,7 @@ def summarize(seeds: tuple[int, ...]) -> pd.DataFrame:
     summary["_order"] = summary["method"].map(order)
     summary = summary.sort_values("_order").drop(columns="_order").reset_index(drop=True)
     tests = paired_vector_tests(question_predictions)
+    seed_tests = paired_seed_tests(seed_metrics)
 
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     unit_predictions.to_csv(
@@ -262,6 +286,11 @@ def summarize(seeds: tuple[int, ...]) -> pd.DataFrame:
     summary.to_csv(OUTPUT_ROOT / "summary.csv", index=False, float_format="%.17g")
     tests.to_csv(
         OUTPUT_ROOT / "paired_question_tests.csv",
+        index=False,
+        float_format="%.17g",
+    )
+    seed_tests.to_csv(
+        OUTPUT_ROOT / "paired_seed_tests.csv",
         index=False,
         float_format="%.17g",
     )
@@ -309,11 +338,17 @@ def summarize(seeds: tuple[int, ...]) -> pd.DataFrame:
         "",
         tests.to_markdown(index=False, floatfmt=".6g"),
         "",
+        "## Paired seed-level tests (two-sided, versus One)",
+        "",
+        seed_tests.to_markdown(index=False, floatfmt=".6g"),
+        "",
     ]
     (OUTPUT_ROOT / "summary.md").write_text("\n".join(markdown), encoding="utf-8")
     print(display.to_string(index=False, float_format=lambda value: f"{value:.4f}"))
     print("\nPaired question-level tests (one-sided: Vector has lower error):")
     print(tests.to_string(index=False, float_format=lambda value: f"{value:.6g}"))
+    print("\nPaired seed-level tests (two-sided, versus One):")
+    print(seed_tests.to_string(index=False, float_format=lambda value: f"{value:.6g}"))
     return summary
 
 

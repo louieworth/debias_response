@@ -9,9 +9,9 @@ cd "$PROJECT_ROOT"
 
 export TMPDIR="/data2/tmp"
 export DATASETS="Twin-2K-500"
-export SEEDS="0 1 2 3 4"
-export VARIANTS="x_only x_one_llm x_avg_llm x_all_llm"
-export GPU_DEVICES="cuda:0 cuda:1 cuda:2 cuda:3 cuda:4 cuda:5 cuda:6 cuda:7"
+export SEEDS="${SEEDS:-0 1 2 3 4}"
+export VARIANTS="${VARIANTS:-x_only x_one_llm one_logprob x_avg_llm x_all_llm}"
+export GPU_DEVICES="${GPU_DEVICES:-cuda:0 cuda:1 cuda:2 cuda:3 cuda:4 cuda:5 cuda:6 cuda:7}"
 
 export RESULT_ROOT_REL="pricing_application/original_split/model_metrics"
 export UNIT_PREDICTION_ROOT_REL="pricing_application/original_split/unit_predictions"
@@ -19,7 +19,7 @@ export LOG_DIR="logs/pricing_application/original_split"
 export SAVE_SPLIT_RESULTS="no"
 export SAVE_UNIT_PREDICTIONS="yes"
 export RESULT_PRECISION="17"
-export SKIP_EXISTING_RESULTS="yes"
+export SKIP_EXISTING_RESULTS="${SKIP_EXISTING_RESULTS:-yes}"
 export AUTO_CLEAR_OLD_RESULTS="no"
 
 # Final individual-level profile used by the paper.

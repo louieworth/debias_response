@@ -278,7 +278,12 @@ def _dataset_path(dataset: str, level: str, split: str) -> Path:
     raise ValueError(f"unknown level {level!r}")
 
 
-def load_individual_matrices(dataset: str) -> IndividualMatrices:
+def load_individual_matrices(
+    dataset: str,
+    *,
+    train_path: Path | None = None,
+    test_path: Path | None = None,
+) -> IndividualMatrices:
     columns = [
         "Variable_Name",
         "score_range_min",
@@ -287,14 +292,10 @@ def load_individual_matrices(dataset: str) -> IndividualMatrices:
         "Human_Response",
         "twin_id",
     ]
-    train = pd.read_parquet(
-        _dataset_path(dataset, "individual", "train"),
-        columns=columns,
-    )
-    test = pd.read_parquet(
-        _dataset_path(dataset, "individual", "test"),
-        columns=columns,
-    )
+    train_path = train_path or _dataset_path(dataset, "individual", "train")
+    test_path = test_path or _dataset_path(dataset, "individual", "test")
+    train = pd.read_parquet(train_path, columns=columns)
+    test = pd.read_parquet(test_path, columns=columns)
     train = train.copy()
     test = test.copy()
     train["_split"] = "train"
